@@ -1,8 +1,8 @@
 {
-  "name": "reader",
+  "name": "htmllang",
   "version": "1.0.0",
   "description": "",
-  "main": "reader.js",
+  "main": "htmllang.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -11,9 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "jsdom": "^16.1.0",
-    "mongodb": "^3.5.7",
-    "request": "^2.88.2",
-    "xlsx": "^0.15.5"
+    "ws": "^7.3.0"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
   }
 }

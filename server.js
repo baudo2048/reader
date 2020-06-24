@@ -1,62 +1,125 @@
 const express = require('express');
-const {MongoClient} = require('mongodb');
+const path = require('path');
 
+const http = require('http')
 const app = express();
 const port = process.env.PORT || 3000;
 
+const WebSocket = require('ws')
+
+const server = http.createServer(app)
+
+const wss = new WebSocket.Server({ server: server })
+
+wss.on('connection', socket => {
+    console.log('connection...')
+    socket.on('message', msg => {
+        const req = JSON.parse(msg)
+        console.log('Message is ' + JSON.stringify(req))
+        if(req.eventName == 'socket.test.request'){
+            console.log('test service + ' + JSON.stringify(req.data))
+            socket.send(JSON.stringify({eventName: 'socket.test.response', data: 'hello'}))
+            return
+        }
+
+        (async () => {
+            await fs.writeFile('test.ux', req.data, (err)=>{
+                if(err) {
+                    console.log('writing error ' + err);
+                } else {
+                    console.log('writing success');
+                }    
+            });
+    
+            await exec(`python parser.py test`, (error, stdout, stderr) => {
+                if (error) {
+                    console.log(`error: ${error.message}`);
+                    return;
+                }
+                if (stderr) {
+                    console.log(`stderr: ${stderr}`);
+                    return;
+                }
+                console.log(`stdout: ${stdout}`);
+                console.log('ok')
+                socket.send('socket.compiler.done')
+            });
+    
+        })();
+    })
+})
+
+
+const fs = require('fs');
+const { exec } = require("child_process");
 
 
 app.get('/', (req, res) => res.send('Hello World! BiP'));
 
+app.get('/compile', (req, res) => {
+    console.log('saving... ' + req.query.code);
 
+    (async () => {
+        await fs.writeFile('test.ux', req.query.code, (err)=>{
+            if(err) {
+                console.log('writing error ' + err);
+            } else {
+                console.log('writing success');
+            }    
+        });
 
-async function listDatabases(client){
-    databasesList = await client.db().admin().listDatabases();
- 
-    console.log("Databases:");
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-};
+        await exec(`python parser.py test`, (error, stdout, stderr) => {
+            if (error) {
+                console.log(`error: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.log(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+            console.log('ok')
+            res.send('ok')
+        });
 
-async function main(){
-    /**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-     */
-    const uri = "mongodb://localhost:27017";
- 
-
-    const client = new MongoClient(uri);
- 
-    try {
-        // Connect to the MongoDB cluster
-        await client.connect();
- 
-        // Make the appropriate DB calls
-        var db = client.db('reader');
-
-        var coll = db.collection('books');
-
-        var item = await coll.findOne({id:0});
-
-        console.log('LEN - ' + item.pensieri.length);
-        return item.pensieri;
- 
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await client.close();
-    }
-}
-
-app.get('/pensieri', (req, res) => {    
-    main().then(i => {
-        console.log('LEN LEN - ' + i.length);
-        res.send(i);
-    });
-    
-
+    })();
 });
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
-app.use(express.static('./FE'));
+app.post('/compile', (req, res) => {
+    console.log('saving... ' + req.query.body);
+
+    (async () => {
+        console.log('body: ' + req.query.code)
+        await fs.writeFile('test.ux', req.body, (err)=>{
+            if(err) {
+                console.log('writing error ' + err);
+            } else {
+                console.log('writing success');
+            }    
+        });
+
+        await exec(`python parser.py test`, (error, stdout, stderr) => {
+            if (error) {
+                console.log(`error: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.log(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+            console.log('ok')
+            res.send('ok')
+        });
+
+    })();
+});
+
+//app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+
+server.listen(process.env.PORT || 3000, () => {
+    console.log(`Server started on port ${server.address().port} :)`);
+});
+
+app.use(express.static(__dirname));
 
