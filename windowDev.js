@@ -93,7 +93,7 @@ imgCode.onclick = ev => {
 }
 imgPreview.onclick = ev => {
     codeArea.style.display = 'none'
-    document.eventManager('windowDev.imgPreviewClicked', {code: textareaCode.value})
+    document.eventManager('windowDev.imgPreviewClicked', {fileName: "test.ux", code: textareaCode.value})
 }
 imgSaveAlt.onclick = ev => {
 }
