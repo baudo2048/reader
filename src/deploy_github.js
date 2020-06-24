@@ -8,8 +8,11 @@ const python = 'C:/Users/u416183/lab/work/py/htmlLang/htmlLang/infrastracture/py
 const git = 'C:/Users/u416183/lab/work/py/htmlLang/htmlLang/infrastracture/PortableGit26/bin/git.exe'
 const gitDir = 'C:/Users/u416183/lab/work/git/reader/.git';
 
-// Vado nella directory git del progetto
-// lancio in seguenza i seguenti comandi
+// 1. Buildo
+
+// 2. Sposto nella cartella git
+
+// 3. Lancio i tre comandi git
 
 (async () => {
     await exec(`${git} --git-dir=${gitDir} add --all`, (error, stdout, stderr) => {
