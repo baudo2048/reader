@@ -50,6 +50,7 @@ textareaCode.style.fontFamily = 'Consolas, "Courier New", monospace';
 textareaCode.style.fontSize = '14px';
 textareaCode.style.backgroundColor = 'black';
 textareaCode.style.color = 'white';
+textareaCode.value = 'div root\n -backgroudColor red\n -width 100px\n -height 100px\n';
 var resizer = document.createElement('div');
 codeArea.appendChild(textareaCode);
 root.appendChild(codeArea);

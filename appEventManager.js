@@ -1,6 +1,8 @@
 export default function eventManager(eventName, msg){
 if(eventName=='windowDev.imgPreviewClicked'){
-document.socket.send('requestCompile', msg)
+document.rest('requestCompile', msg)
+} else if (eventName == 'requestCompile.response') {
+document.dispatch('updateContent', msg)
 } else if (eventName == 'be4fe.compileComplete') {
 document.dispatch('updateContent', msg)
 } else if (eventName == 'accordion.test') {

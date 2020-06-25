@@ -9,11 +9,14 @@ import appEventManager from './appEventManager.js'
 document.eventManager = appEventManager
 
 import socketClient from './lib/socket/socketClient.js'
-socketClient() 
+//socketClient() 
 
 // GENERATED
 import socketHandler from './socketHandler.js'
-socketHandler()
+//socketHandler()
+
+import restClient from '../lib/socket/restClient.js'
+restClient()
 
 document.body.appendChild(homeDesktop())
 
