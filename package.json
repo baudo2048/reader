@@ -5,12 +5,13 @@
   "main": "htmllang.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./dist/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mobile-detect": "^1.4.4",
     "ws": "^7.3.0"
   },
   "optionalDependencies": {

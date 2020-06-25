@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const MobileDetect = require('mobile-detect')
+
 const http = require('http')
 const app = express();
 app.use(express.json()) // for parsing application/json
@@ -27,15 +29,25 @@ app.get('/', (req, res) => {
 
     console.log(JSON.stringify(req.headers))
 
-    res.send(JSON.stringify(req.headers))
+    md = new MobileDetect(req.headers['user-agent']);
+    
+    //req.header('User-Agent')
 
-    req.header('User-Agent')
-
+    console.log( md.mobile() );          // 'Sony'
+console.log( md.phone() );           // 'Sony'
+console.log( md.tablet() );          // null
+console.log( md.userAgent() );       // 'Safari'
+console.log( md.os() );              // 'AndroidOS'
+console.log( md.is('iPhone') );      // false
+console.log( md.is('bot') );         // false
+console.log( md.version('Webkit') );         // 534.3
+console.log( md.versionStr('Build') );       // '4.1.A.0.562'
+console.log( md.match('playstation|xbox') ); // false
 
     //res.set('Content-Type', 'text/html')
 
 
-    //res.sendFile(path.join(`${__dirname}/index.html`));
+    res.sendFile(path.join(`${__dirname}/index.html`));
 });
 
 app.post('/requestCompile', (req, res, next) => {
