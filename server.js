@@ -31,9 +31,10 @@ app.get('/', (req, res) => {
 
     md = new MobileDetect(req.headers['user-agent']);
     if(md.mobile()=="null"){
-        res.sendFile(path.join(`${__dirname}/indexMobile.html`));
-    } else {
         res.sendFile(path.join(`${__dirname}/index.html`));
+    } else {
+res.sendFile(path.join(`${__dirname}/indexMobile.html`));
+        
         
     }
     //res.set('Content-Type', 'text/html')
