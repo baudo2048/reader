@@ -46,8 +46,8 @@ console.log( md.match('playstation|xbox') ); // false
 
     //res.set('Content-Type', 'text/html')
 
-
-    res.sendFile(path.join(`${__dirname}/index.html`));
+    res.send(md.mobile() + ' - ' + md.phone() + ' - ' + md.tablet())
+    //res.sendFile(path.join(`${__dirname}/index.html`));
 });
 
 app.post('/requestCompile', (req, res, next) => {
