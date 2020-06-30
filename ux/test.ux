@@ -1,0 +1,4 @@
+div root
+    -backgroundColor yellow
+    -width 100px
+    -height 100px

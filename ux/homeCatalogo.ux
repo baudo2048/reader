@@ -1,0 +1,31 @@
+div root
+    -display flex
+    -flexDirection column
+    -backgroundColor red
+    
+    div
+        -display flex
+        -backgroundColor green
+        
+        button cmd1
+            -height 30px
+            'Command 1
+            .onclick ev => {eventManager('homeCatalogo__btn1__Clicked')};
+        button
+            'Command 2
+            .onclick ev => {eventManager('homeCatalogo__btn2__Clicked')};
+
+        button btn3
+            'Command 3
+
+    div contentArea
+        -display flex
+        -justifyContent space-around
+
+        div
+            -margin 30px 30px 30px 30px
+            p
+                'Lateral
+
+        div windowArea
+

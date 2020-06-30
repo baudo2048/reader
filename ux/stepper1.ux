@@ -1,0 +1,49 @@
+div stepper1Root
+	-display flex
+	-flexDirection column
+	div
+		h1
+			-textAlign center
+			'NUOVO CONTRATTO
+	div
+		-display flex
+		-justifyContent space-around
+		div
+			-display flex
+			-flexDirection column
+			-alignItems center
+			div
+				-className stepperBox
+				-width 50px
+				-height 20px
+				-borderRadius 20px
+				-backgroundColor blue
+				-border 1px solid black
+			p
+				'FIRMATARI
+			
+		div
+			-display flex
+			-flexDirection column
+			-alignItems center
+			div
+				-width 50px
+				-height 20px
+				-borderRadius 20px
+				-backgroundColor white
+				-border 1px solid black
+			p
+				'FIRMA
+		div
+			-display flex
+			-flexDirection column
+			-alignItems center
+			div
+				-width 50px
+				-height 20px
+				-borderRadius 20px
+				-backgroundColor white
+				-border 1px solid black
+			p
+				'ESITO
+			

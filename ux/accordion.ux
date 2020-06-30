@@ -1,0 +1,8 @@
+div root
+    button a1
+        .className accordion
+        'Project
+    div panelPrj
+        -maxHeight 500px
+        -overflow auto
+        .className panel

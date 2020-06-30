@@ -1,4 +1,5 @@
 import homeDesktop from './homeDesktop.js'
+import indexMobile from './indexMobile.js'
 
 // CONFIGURATION FILES
 import eventConf from './lib/event/eventConf.js'
@@ -18,7 +19,14 @@ import socketHandler from './socketHandler.js'
 import restClient from '../lib/socket/restClient.js'
 restClient()
 
-document.body.appendChild(homeDesktop())
+import parser from './lib/parser/parse.js'
+document.parser = parser
 
 
+
+if(screen.width > 700){
+    document.body.appendChild(homeDesktop())
+} else {
+    document.body.appendChild(indexMobile())
+}
 

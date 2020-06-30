@@ -1,20 +1,3 @@
-export default function functionName() 
-{
-var root = document.createElement('div')
-var a1 = document.createElement('button')
-a1.className= 'accordion'
-var textNode_3 = document.createTextNode('Project')
-a1.append(textNode_3)
-var panelPrj = document.createElement('div')
-
-root.appendChild(a1)
-
-panelPrj.style.maxHeight='500px'
-panelPrj.style.overflow='auto'
-panelPrj.className= 'panel'
-
-root.appendChild(panelPrj)
-
 var acc = []
 
 acc.push(a1)
@@ -55,5 +38,3 @@ fetch('/files', {
     panelPrj.append(item)
   })
 })
-return root
-}

@@ -1,0 +1,30 @@
+div root
+	-display grid
+	-gridTemplateColumns 1fr 1fr 1fr
+	-gridGap 50px
+	-justifyContent center
+	-textAlign center
+	div
+		-border 1px solid blue
+		p
+			'lorem 1
+		img
+			.src ./img/done_black.png	
+	div
+		p
+			'lorem 2
+		img
+			.src ./img/done_black.png
+	div
+		p
+			'lorem 3
+	div
+		p
+			'lorem 4
+	div
+		p
+			'lorem 5
+	div
+		p
+			'lorem 6
+        

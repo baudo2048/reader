@@ -1,0 +1,20 @@
+windowDev.imgPreviewClicked
+    rest requestCompile
+
+requestCompile.response
+    disp updateContent
+
+be4fe.compileComplete
+    disp updateContent
+
+accordion.test                                 
+    send socket.test.request             
+
+socket.test.response +                         
+    disp h5Response2     
+
+socket.compiler.done +
+    disp updateContent
+
+   
+                

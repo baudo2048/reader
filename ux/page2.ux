@@ -1,0 +1,11 @@
+div page2Root
+	div page2Content
+		\include ispHeader.ux
+	
+		button
+			'Clicke me
+			.onclick ev => {showModal1();}
+		
+	\include modal1.ux
+	
+*import page2.script.js

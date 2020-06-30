@@ -1,0 +1,13 @@
+div menu1Root
+	-display flex
+	
+	div
+		p menu1FileBtn
+			.onclick (ev) => {eventManager('menu1FileBtnClicked')};
+			'File
+		p
+			'Projects
+
+	div menu1MenuContent
+		*ispHeader
+		

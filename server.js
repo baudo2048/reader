@@ -1,8 +1,6 @@
 const express = require('express');
 const path = require('path');
 
-const MobileDetect = require('mobile-detect')
-
 const http = require('http')
 const app = express();
 app.use(express.json()) // for parsing application/json
@@ -29,15 +27,7 @@ app.get('/', (req, res) => {
 
     console.log(JSON.stringify(req.headers))
 
-    md = new MobileDetect(req.headers['user-agent']);
-    if(md.mobile()=="null"){
-        res.sendFile(path.join(`${__dirname}/index.html`));
-    } else {
-res.sendFile(path.join(`${__dirname}/indexMobile.html`));
-        
-        
-    }
-    //res.set('Content-Type', 'text/html')
+    res.sendFile(path.join(`${__dirname}/index.html`));
 });
 
 app.post('/requestCompile', (req, res, next) => {
@@ -54,7 +44,7 @@ app.post('/requestCompile', (req, res, next) => {
             }    
         });
 
-        await exec(`python parser.py test`, (error, stdout, stderr) => {
+        await exec(`${__dirname}/infrastracture/python/python37emb/python.exe ./parser.py ${__dirname}/ux/test.ux`, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return;
@@ -71,6 +61,64 @@ app.post('/requestCompile', (req, res, next) => {
     })();
 })
 
+/****
+ * file
+ *  fileName
+ */
+
+app.post('/file', (req, res, next) => {
+    //req.sendFile(path.join(`${__dirname}/ux/${req.body.data.fileName}`))
+
+    var code = fs.readFileSync(`${__dirname}/ux/${req.body.fileName}`, 'utf8')
+
+    const noExt = req.body.fileName.substr(0,req.body.fileName.length-3)
+    var scriptCode = ''
+    if (fs.existsSync(`${__dirname}/script/${noExt}.script.js`)) {
+        scriptCode = fs.readFileSync(`${__dirname}/script/${noExt}.script.js`, 'utf8')
+    }
+
+    
+
+    res.set('Content-Type', 'application/json')
+    res.send(JSON.stringify({code:code, scriptCode:scriptCode}))    
+})
+
+app.post('/files', (req, res, next)=> {
+    
+    fs.readdir(`${__dirname}/ux`, (err, filenames)=>{
+        if(err){
+            return
+        }
+        
+        res.set('Content-Type', 'application/json')
+        res.send(JSON.stringify(filenames))
+    })
+})
+
+app.post('/saveAs', (req, res, next) => {
+    console.log('saving ux file...')
+    fs.writeFileSync(path.join(__dirname, 'ux', req.body.fileName), req.body.code, 'utf8')
+    
+    var fileNameScript = req.body.fileName.substr(0,req.body.fileName.length-3)
+    try {
+        console.log('saving script...')
+        fs.writeFileSync(path.join(__dirname, 'script', `${fileNameScript}.script.js`), req.body.scriptCode, 'utf8')
+    } catch(err){
+        console.error(err)
+    }
+    console.log('saved')
+    res.send('done')
+})
+
+
+app.post('/saveGenScript', (req, res, next) => {
+    console.log('saving gen script...')
+    var fileNameScript = req.body.fileName.substr(0,req.body.fileName.length-3) + '.js'
+
+    fs.writeFileSync(path.join(__dirname, fileNameScript), req.body.code, 'utf8')
+    console.log('saved')
+    res.send('done')
+})
 
 //app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
 

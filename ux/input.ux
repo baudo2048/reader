@@ -1,0 +1,9 @@
+div root
+    label
+        .for avatar
+        'Choose a profile picture:
+
+    input
+        .type file
+        .id avatar
+        .name avatar

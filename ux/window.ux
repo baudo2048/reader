@@ -1,0 +1,40 @@
+div windowRoot
+    -display flex
+    -position fixed
+    -width 500px
+    -height 400px
+    -top 100px
+    -left 300px
+    -flexDirection column
+    -border 3px solid black
+    -overflow none
+    -zIndex 100
+    -boxSizing border-box
+    
+    div topBar
+        -display flex
+        -height 20px
+        -backgroundColor #f3f3f3
+    
+        img windowImgMove 
+            .src ./img/move.png
+
+        img windowImgMaximize
+            .src ./img/maximize.png
+
+        img windowImgClose
+            .src ./img/close_black.png
+    
+    div contentArea
+        
+
+    div resizer
+        -position absolute
+        -width 3px
+        -height 3px
+        -borderRadius 50%
+        -border 3px solid #4286f4
+        -right -5px
+        -bottom -5px
+        -cursor nwse-resize
+

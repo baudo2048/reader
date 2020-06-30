@@ -1,0 +1,7 @@
+table table1
+	-padding 15px
+
+	tr heading
+		th
+			input
+				.type checkbox

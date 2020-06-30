@@ -1,0 +1,65 @@
+div root
+    -flex 1 1 0
+    -backgroundColor white
+    -overflow auto
+    -display flex
+    -flexDirection column
+
+    div 
+        *ispHeader
+    
+    div
+        *stepper1
+    
+    div
+        display flex
+        flexDirection column
+        
+        div
+            h3
+                -textAlign center
+                'Selezione firmatari
+            p
+                -textAlign center
+                'lorem ipsum lorem ipsum
+        
+        div
+            p
+                'Nome azienda principale
+                
+        div
+            select
+                option
+                    'Potere 1
+                option
+                    'Potere 2
+                option 
+                    'Potere 3
+        
+        div
+            -display flex
+            -flexDirection column
+            div
+                h3
+                    'Title elenco firmatari
+            div
+                *panelRegole
+            div 
+                -display flex
+                -justifyContent center
+                *table1
+    
+    div
+        -display flex
+        -justifyContent space-between
+        button
+            'ANNULLA
+            
+        button
+            'CONTINUA
+            .onclick ev => {eventManager('page1BtnContinuaClicked')}
+    div
+        p
+            'SALVA E RIPRENDI IN SEGUITO
+
+    *modal1

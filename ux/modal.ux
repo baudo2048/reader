@@ -1,0 +1,39 @@
+div root
+    -display flex
+    -flexDirection column
+    -position absolute
+    -height 200px
+    -width 400px
+    -margin auto
+    -left 0
+    -right 0
+    -top 0
+    -bottom 0
+    -backgroundColor white
+    -border 3px solid blue
+    -boxShadow 5px 10px #888888
+    -visibility visible
+    -zIndex 100
+    
+    div
+        p title
+            -textAlign center
+            'PROFILO DI FIRMA
+    
+    div contentArea
+        p 
+            -textAlign center
+            'Seleziona la tipologia di utenza con cui il cliente firmera il contratto
+    
+    div
+    
+    div
+        -display flex
+        -justifyContent space-between
+        
+        button annullaBtn
+            'ANNULLA
+        
+        button continuaBtn
+            'CONTINUA
+

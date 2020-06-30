@@ -1,0 +1,10 @@
+svg root
+    -width 400px
+    -height 300px
+    .viewBox 0 0 300 300
+    .onclick ev => {alert('hellobay')}
+    circle
+        .cx 80
+        .cy 80
+        .r 30
+        .fill red

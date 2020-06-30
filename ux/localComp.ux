@@ -1,0 +1,5 @@
+div root
+	p
+		'Hello local comp
+	button btn1
+        'btn1

@@ -11,11 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mobile-detect": "^1.4.4",
+    "mongodb": "^3.5.9",
     "ws": "^7.3.0"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.1",
     "utf-8-validate": "^5.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

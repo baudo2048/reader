@@ -1,0 +1,6 @@
+windowDev.imgPreviewClicked
+    rest file
+
+
+windowDev.imgPreviewClicked.response
+    disp updateContent
