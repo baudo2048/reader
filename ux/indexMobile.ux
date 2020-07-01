@@ -35,5 +35,9 @@ div root
             -display none
             .src ./img/sacco.png
 
+        img imgHeart
+            -display none
+            .src ./img/heart.gif
+
         h5 par1 'Clicca sul sacchetto delle monetine
             -display none

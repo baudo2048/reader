@@ -44,13 +44,19 @@ var imgSacco = document.createElement('img')
 imgSacco.style.width='60px'
 imgSacco.style.display='none'
 imgSacco.src= './img/sacco.png'
-var par1 = document.createElement('h5')
-par1.append(document.createTextNode( 'Clicca sul sacchetto delle monetine'))
+var imgHeart = document.createElement('img')
 
 content.appendChild(h1hello)
 
 
 content.appendChild(imgSacco)
+
+imgHeart.style.display='none'
+imgHeart.src= './img/heart.gif'
+var par1 = document.createElement('h5')
+par1.append(document.createTextNode( 'Clicca sul sacchetto delle monetine'))
+
+content.appendChild(imgHeart)
 
 par1.style.display='none'
 
@@ -83,13 +89,14 @@ contentAnimation.onfinish = ev => {
 imgSacco.onclick = ev => {
     par1.style.display = 'none'
     imgSacco.style.display = 'none'
-    h1hello.innerHTML = 'Torna domani, continua a giocare, accumula monetine'
+    h1hello.innerHTML = 'Buona Giornata! <br/> Torna domani, continua a giocare, accumula monetine'
 
     for(var i=1000;i<=2500;i++){
         coins.innerHTML = i
-
-
     }
+
+
+    imgHeart.style.display = 'initial'
 }
 return root
 }
