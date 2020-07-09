@@ -1,0 +1,7 @@
+div root
+    -width 100px
+    -height 100px
+    -backgroundColor pink
+    -animation pulsate 1s ease-out
+    -animationIterationCount infinite
+    -opacity 1 

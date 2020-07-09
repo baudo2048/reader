@@ -1,5 +1,7 @@
 div root
     label
+        -display flex
+        -fontWeight bold
         .for avatar
         'Choose a profile picture:
 

@@ -4,11 +4,39 @@ textareaCode.onkeydown = ev => {
         //prendo il caret e aggiungo quattro spazi
         const caretPos = textareaCode.selectionStart
         const startCode1 = 0
-        const strFirstLen = (textareaCode.value.substr(0, caretPos)).lenght
-        const strLen = (textareaCode.value).lenght
-        const strSecondLen = strLen-strFirstLen
+        const strFirstLen = textareaCode.value.substr(0, caretPos)
+        const strLen = textareaCode.value
+        const strSecondLen = strLen.length-strFirstLen.length
         textareaCode.value = textareaCode.value.substr(0, caretPos) + "    " + textareaCode.value.substr(caretPos, strSecondLen)
-        textareaCode.selectionStart = textareaCode.selectionStart + 4
+        textareaCode.selectionEnd = caretPos + 4
+    } 
+}
+
+textareaScript.onkeydown = ev => {
+    if(ev.keyCode == 9){
+        ev.preventDefault()
+        //prendo il caret e aggiungo quattro spazi
+        const caretPos = textareaScript.selectionStart
+        const startCode1 = 0
+        const strFirstLen = textareaScript.value.substr(0, caretPos)
+        const strLen = textareaScript.value
+        const strSecondLen = strLen.length-strFirstLen.length
+        textareaScript.value = textareaScript.value.substr(0, caretPos) + "    " + textareaScript.value.substr(caretPos, strSecondLen)
+        textareaScript.selectionEnd = caretPos + 4
+    } 
+}
+
+textareaCss.onkeydown = ev => {
+    if(ev.keyCode == 9){
+        ev.preventDefault()
+        //prendo il caret e aggiungo quattro spazi
+        const caretPos = textareaCss.selectionStart
+        const startCode1 = 0
+        const strFirstLen = textareaCss.value.substr(0, caretPos)
+        const strLen = textareaCss.value
+        const strSecondLen = strLen.length-strFirstLen.length
+        textareaCss.value = textareaCss.value.substr(0, caretPos) + "    " + textareaCss.value.substr(caretPos, strSecondLen)
+        textareaCss.selectionEnd = caretPos + 4
     } 
 }
 
@@ -31,6 +59,7 @@ imgCode.onclick = ev => {
     codeArea.style.display = 'flex'
     textareaCode.style.display = 'block'
     textareaScript.style.display = 'none'
+    textareaCss.style.display = 'none'
     contentArea.style.display = 'none'
 }
 
@@ -38,6 +67,15 @@ imgScript.onclick = ev => {
     codeArea.style.display = 'flex'
     textareaCode.style.display = 'none'
     textareaScript.style.display = 'block'
+    textareaCss.style.display = 'none'
+    contentArea.style.display = 'none'
+}
+
+imgCss.onclick = ev => {
+    codeArea.style.display = 'flex'
+    textareaCode.style.display = 'none'
+    textareaScript.style.display = 'none'
+    textareaCss.style.display = 'block'
     contentArea.style.display = 'none'
 }
 
@@ -46,14 +84,32 @@ imgPreview.onclick = ev => {
     count++
     codeArea.style.display = 'none'
     
-    var code =document.parser('functionName', textareaCode.value, textareaScript.value)
+    var code =document.parser('functionName', textareaCode.value, textareaScript.value, textareaCss.value)
 /*     var script = document.createElement('script')
     script.append(document.createTextNode(code)) */
 
     // DA OTTIMIZZARE ATTACCA UNO SCRIPT PER OGNI COMPILAZIONE
     //document.body.appendChild(script)
+    //document.json('saveGenScript', {fileName: fileName.value, code: code})
+    //document.register('saveGenScript' ev => {
+    //    alert(ev.detail)
+    //})
+    
+    document.json('saveGenScript', {fileName: fileName.value, code:code}).then(data=>{
+        console.log('saved.')
+        //scriptArea.innerHTML = ''
+        //scriptArea.append(document.createTextNode(code))
+        
+        var fileToImport = fileName.value.substr(0,fileName.value.length-3)
+        import('./'+fileToImport+'.js?'+count).then(module => {
+            var dom = module.default()
+            contentArea.style.display = 'flex'
+            contentArea.innerHTML = ''
+            contentArea.append(dom)
+        })
+    })
 
-    fetch('/saveGenScript', {
+/* fetch('/saveGenScript', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         mode: 'same-origin', 
@@ -71,7 +127,7 @@ imgPreview.onclick = ev => {
             contentArea.innerHTML = ''
             contentArea.append(dom)
         })
-    })
+    }) */
 
 
 
@@ -85,7 +141,12 @@ imgSaveAlt.onhover = ev => {
 
 imgSaveAlt.onclick = ev => {
     imgSaveAlt.style.backgroundColor = 'red'
-    fetch('/saveAs', {
+
+    document.json('saveAs', {fileName:fileName.value, code:textareaCode.value, scriptCode:textareaScript.value, cssCode:textareaCss.value}).then(data=>{
+        console.log('saved')
+    })
+
+/*     fetch('/saveAs', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         mode: 'same-origin', 
@@ -93,7 +154,7 @@ imgSaveAlt.onclick = ev => {
         body: JSON.stringify({fileName: fileName.value, code: textareaCode.value, scriptCode: textareaScript.value})
     }).then(res => {
         console.log('saved.')
-    })
+    }) */
 }
 
 function makeResizableDiv(div, resizer) {
@@ -190,7 +251,22 @@ document.registerDefault(updateContent)
 
 document.register('showFile', ev=>{
     count++
-    fetch('/file', {
+
+    document.json('file', {fileName:ev.detail.fileName}).then(data=>{
+        textareaCode.value = data.code
+        textareaScript.value = data.scriptCode
+        textareaCss.value = data.cssCode
+        fileName.value = ev.detail.fileName
+        
+        var fileToImport = fileName.value.substr(0,fileName.value.length-3)
+        import('./'+fileToImport+'.js?'+count).then(module => {
+            var dom = module.default()
+            contentArea.innerHTML = ''
+            contentArea.append(dom)
+        })        
+    })
+
+/*     fetch('/file', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({fileName: ev.detail.fileName})
@@ -208,5 +284,53 @@ document.register('showFile', ev=>{
             contentArea.append(dom)
         })
         
-    })
+    }) */
 })
+
+document.register('windowDev.textareaCode.append', ev => {
+    
+    var riga = ev.detail.varName + '.style.' + ev.detail.propertyName + ' = ' + "'" + ev.detail.propertyValue + "'"
+    textareaCss.value = textareaCss.value + '\n' + riga
+})
+
+
+imgDesign.onclick = ev => {
+    // Per ogni elemento mouseonover
+    // Cambio i bordi
+    var stack = []
+
+    
+    stack.push(contentArea.children)
+
+    while(stack.length!=0){
+        var ch = stack.pop()
+
+        Array.from(ch).forEach( v => {
+            if(v.nodeType==1){
+                v.onmouseover = ev => {
+                    ev.target.style.border = '2px solid orange'
+                }
+                v.onmouseout = ev => {
+                    ev.target.style.border = 'initial'
+                }
+                v.onclick = ev => {
+                    ev.preventDefault()
+                    ev.stopPropagation()
+                    //Invio il dom alla paletta
+                    document.em('paletta', {dom:ev.target})
+                }
+                stack.push(v.children)
+            }
+            
+        })
+    }
+    // Per ogni elemento onclick
+}
+
+imgDownload.onclick = ev => {
+    // Genero il file da scaricare 
+
+    // faccio partire il download
+    alert('Work in progress')
+}
+

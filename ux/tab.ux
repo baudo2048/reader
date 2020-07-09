@@ -1,27 +1,27 @@
 div tabRoot
 
-	button btn1
-		-backgroundColor white
-		'tab 1
-		.className BUTTON_YMA
-		.onclick ev => {toggleTab(event, tab1)};
-	button btn2
-		-backgroundColor #DDDDDD
-		'tab 2
-		.className BUTTON_YMA
-		.onclick ev => {toggleTab(event, tab2)};
-	button btn3
-		-backgroundColor #DDDDDD
-		'tab 3
-		.className BUTTON_YMA
-		.onclick ev => {toggleTab(event, tab3)};
+    button btn1
+        -backgroundColor white
+        'tab 1
+        .className BUTTON_YMA
+        .onclick ev => {toggleTab(event, tab1)};
+    button btn2
+        -backgroundColor #DDDDDD
+        'tab 2
+        .className BUTTON_YMA
+        .onclick ev => {toggleTab(event, tab2)};
+    button btn3
+        -backgroundColor #DDDDDD
+        'tab 3
+        .className BUTTON_YMA
+        .onclick ev => {toggleTab(event, tab3)};
 
-	div tab1
-		-display block
-	div tab2
-		-display none
-		'tab 2
-	div tab3
-		-display none
-		div 
-			.id chart_div
+    div tab1
+        -display block
+    div tab2
+        -display none
+        'tab 2
+    div tab3
+        -display none
+        div 
+            .id chart_div

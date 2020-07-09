@@ -1,0 +1,21 @@
+div root
+    -display flex
+    -flexDirection column
+    
+    *ispHeader
+
+    div page
+        -display flex
+        -flexDirection column
+        -flexGrow 1
+        -alignItems center
+        h1 'Title
+
+        p ' lorem ipsum
+
+        img 
+            -width 1000px
+            -height 700px
+            .src ./img/pmmap.png
+
+    

@@ -1,10 +1,10 @@
 div ispHeaderRoot
-	-display flex
-	-justifyContent space-between
-	-backgroundColor blue
-	div
-		img
-			.src ./img/logo-intesasanpaolo.png
-	div
-		img
-			.src ./img/tempio_grigio.png
+    -display flex
+    -justifyContent space-between
+    -backgroundColor blue
+    div
+        img
+            .src ./img/logo-intesasanpaolo.png
+    div
+        img
+            .src ./img/tempio_grigio.png

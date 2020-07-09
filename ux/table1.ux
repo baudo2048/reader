@@ -1,7 +1,9 @@
 table table1
-	-padding 15px
+    -padding 15px
+    -backgroundColor green
 
-	tr heading
-		th
-			input
-				.type checkbox
+    tr heading
+        th
+            -backgroundColor purple
+            input
+                .type checkbox

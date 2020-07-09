@@ -1,0 +1,11 @@
+div root
+    h1 'Lezione 1 
+    h3 'circa 1 min.
+    p 'Leggi la lezione del giorno, impara cose nuove, prova gli esercizi proposti, condividi con altri quanto hai imparato e alla fine di ogni lezione ricordati di cliccare sul sacchetto delle monete. I gettoni sono un indicatore di quanto hai imparato. Più monete più ti sei impegnato ed applicato.
+        -textAlign justify
+    br
+    br
+    img imgSacco
+        -width 60px
+        .src ./img/sacco.png
+        .className dealWithIt

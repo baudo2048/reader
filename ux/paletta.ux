@@ -1,0 +1,127 @@
+div root
+    *window w
+        -overflow auto
+        div c
+            -backgroundColor white
+            -flexGrow 1
+
+            h1 'Frequently used
+            div
+                -display flex
+                -flexDirection column
+                .className pure-form pure-form-aligned
+                input backgroundColor
+                    -width 100%
+                    .type color
+
+            h1 'TEXT
+            div
+                -display flex
+                -flexDirection column
+                .className pure-form pure-form-aligned
+
+                select fontFamily
+                    -width 100%
+                    .className pure-input-1-2
+                    option 'Arial
+                    option 'Comic Sans MS
+                    option 'Courier New
+                    option 'Impact
+                    option 'sans-serif
+                    option 'Times New Roman
+
+                select fontSize
+                    -width 100%
+                    .className pure-input-1-2
+                    option '8px
+                    option '10px
+                    option '12px
+                    option '14px
+                    option '16px
+                    option '18px
+                    option '20px
+                    option '24px
+                    option '36px
+                    option '48px
+                    option '72px
+
+                input color
+                    -width 100%
+                    .type color
+
+                select textAlign
+                    -width 100%
+                    .className pure-input-1-2
+                    option 'center
+                    option 'left
+                    option 'right
+                    option 'justify
+                    option 'start
+
+                select fontWeight
+                    -width 100%
+                    .className pure-input-1-2
+                    option 'normal
+                    option 'bold
+                    option 'bolder
+                    option 'lighter
+                    option 'initial
+                    option 'inherit
+
+                select fontStyle
+                    -width 100%
+                    .className pure-input-1-2
+                    option 'normal
+                    option 'italic
+                    option 'oblique
+                    option 'initial
+                    option 'inherit
+
+            h1 'BUTTON
+            div
+                .className pure-form pure-form-aligned
+                select
+                    .className pure-input-1-2
+                    option                        
+                        button 'blue
+                            -backgroundColor blue
+                    option
+                        button 'green
+                            -backgroundColor green
+
+            h1 'FLEX
+            div
+                -display flex
+                -flexDirection column
+                .className pure-form pure-form-aligned
+                input isFlexbox
+                    .type checkbox
+
+                select flexDirection
+                    option 'row
+                    option 'column
+
+            h1 'GRID
+            div
+                .className pure-form pure-form-aligned
+                select
+                    .className pure-input-1-2
+                    option                        
+                        button 'blue
+                            -backgroundColor blue
+                    option
+                        button 'green
+                            -backgroundColor green
+
+            h1 'BOX
+            div
+                -display flex
+                -flexDirection column
+                .className pure-form pure-form-aligned
+                input width
+                    -width 100%
+                    .type text
+                input height
+                    -width 100%
+                    .type text
+                

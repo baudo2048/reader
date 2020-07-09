@@ -2,9 +2,9 @@ import sys
 import os
 import math
 
-inFolder = "C:/Users/u416183/lab/work/py/htmlLang/htmlLang/dist/ux/"
-outFolder = "C:/Users/u416183/lab/work/py/htmlLang/htmlLang/dist/"
-scriptFolder = "C:/Users/u416183/lab/work/py/htmlLang/htmlLang/dist/script/"
+inFolder = "C:/Users/u416183/lab/work/node/htmlLang/dist/ux/"
+outFolder = "C:/Users/u416183/lab/work/node/htmlLang/dist/"
+scriptFolder = "C:/Users/u416183/lab/work/node/htmlLang/dist/script/"
 
 def getTokenType(t):
 	sentinel = t[0]

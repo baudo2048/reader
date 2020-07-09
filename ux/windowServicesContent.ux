@@ -1,0 +1,5 @@
+DIV root
+    -display flex
+    -flexGrow 1
+    -backgroundColor white
+    H1 'Hello Subcomponente casino

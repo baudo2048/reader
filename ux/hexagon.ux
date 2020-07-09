@@ -1,0 +1,4 @@
+div root
+    .varName root
+    h1 'Microservice name
+    p 'microservice description

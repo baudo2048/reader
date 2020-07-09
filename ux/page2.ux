@@ -6,6 +6,7 @@ div page2Root
 			'Clicke me
 			.onclick ev => {showModal1();}
 		
+        // OLD PARSER
 	\include modal1.ux
-	
+// OLD PARSER	
 *import page2.script.js

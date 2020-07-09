@@ -71,5 +71,6 @@ function showPage2(ev){
 
 document.registerDefault(showPage1);
 document.registerDefault(showPage2)
+
 return root
 }

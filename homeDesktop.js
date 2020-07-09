@@ -1,111 +1,96 @@
 import acc1_ from './accordion.js'
-import window from './window.js'
-import page1 from './page1.js'  // Questi li posso importare anche in maniera dinamica
+import help_27_ from './help.js'
 import windowDev from './windowDev.js'
-import input1 from './input.js'
+import paletta from './paletta.js'
 export default function functionName() 
 {
 var root = document.createElement('div')
 root.style.display='flex'
 root.style.flexDirection='column'
 root.style.height='100%'
+root.style.alignContent='center'
 var header = document.createElement('div')
-header.style.height='40px'
 var btn1 = document.createElement('button')
-var textNode_7 = document.createTextNode('OpenWindow')
-btn1.append(textNode_7)
+btn1.append(document.createTextNode( 'Nuovo Progetto'))
+btn1.style.margin='10px'
+btn1.style.backgroundColor='rgb(0, 0, 128)'
+btn1.className= 'bttn-pill bttn-md'
 var btn2 = document.createElement('button')
+btn2.append(document.createTextNode( 'Editor'))
 
 header.appendChild(btn1)
 
-var textNode_9 = document.createTextNode('WindowDev')
-btn2.append(textNode_9)
+btn2.style.margin='10px'
+btn2.style.backgroundColor='rgb(0, 255, 128)'
+btn2.className= 'bttn-pill bttn-md'
 var btn3 = document.createElement('button')
+btn3.append(document.createTextNode( 'Paletta'))
 
 header.appendChild(btn2)
 
-var textNode_11 = document.createTextNode('Open Component')
-btn3.append(textNode_11)
-var div_12 = document.createElement('div')
+btn3.style.margin='10px'
+btn3.style.backgroundColor='rgb(0, 255, 128)'
+btn3.className= 'bttn-pill bttn-md'
+var div_18 = document.createElement('div')
 
 header.appendChild(btn3)
 
 
 root.appendChild(header)
 
-div_12.style.display='flex'
-div_12.style.flexGrow='1'
+div_18.style.display='flex'
+div_18.style.flexGrow='1'
 var sidebar = document.createElement('div')
-sidebar.style.width='200px'
-sidebar.style.backgroundColor='cyan'
+sidebar.style.width='250px'
 var acc1 = acc1_()
 var content = document.createElement('div')
 
 sidebar.appendChild(acc1)
 
 content.style.flexGrow='1'
-content.style.backgroundColor='green'
-var textNode_22 = document.createTextNode('content')
-content.append(textNode_22)
+content.style.backgroundColor='#f3f3f3'
+var help_27 = help_27_()
 
-div_12.appendChild(sidebar)
-
-
-div_12.appendChild(content)
+content.appendChild(help_27)
 
 
-root.appendChild(div_12)
+div_18.appendChild(sidebar)
 
+
+div_18.appendChild(content)
+
+
+root.appendChild(div_18)
+
+
+
+var wPaletta = paletta()
+content.append(wPaletta)
 
 var w2 = windowDev()
 w2.style.display = 'flex'
 content.append(w2)
 
-var w = window();
-w.style.display = 'none'
-content.append(w);
-
-w.ondragover = ev => {
-    ev.preventDefault()
-}
-
-w.ondrop = ev => {
-    ev.preventDefault()
-
-    // IF DIV THEN BLA BLA
-    w.contentArea.append(page1())
-}
-
-btn1.onclick = ev=>{
-    w.style.display = 'flex'
-}
 
 btn2.onclick = ev =>{
     w2.style.display = 'flex'
 }
 
+
+btn1.onclick = ev => {
+    var prjName = (prompt("Nome del progetto (no spazi, no caratteri speciali)")).trim()
+    if(prjName=='' || prjName==null){
+        return
+    }
+
+}
+
 btn3.onclick = ev => {
-    
-    import('./modal.js').then(m => {
-        console.log('btn3 clicked')
-        const mod1 = m.default()
-        mod1.contentArea.innerHTML = ''
-        mod1.contentArea.append(input1())
-
-        mod1.continuaBtn.onclick = ev => {
-            mod1.style.display = 'none'
-        }
-        // mod1 = mod1.createModal(document.createTextNode('hello'), document.createTextNode('lorem'), ev => {
-        //     alert('cclicked')
-        // })
-
-        mod1.style.display = 'flex'
-
-        content.append(mod1)
-    })
+    wPaletta.style.display = 'flex'
 }
 
 
-// Qui attacco il contenuto di file e cartelle al mio accordion
+
+
 return root
 }

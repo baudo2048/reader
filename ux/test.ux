@@ -1,4 +1,6 @@
 div root
-    -backgroundColor yellow
+    -backgroundColor red
     -width 100px
     -height 100px
+    .class blazingStar
+    

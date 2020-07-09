@@ -1,0 +1,17 @@
+div root
+    h1 'CSS LIBRARIES
+    h2 'BUTTONS
+    ul
+        li
+            a 'recensione
+                .href https://speckyboy.com/css-button-libraries/
+        li
+            a 'bttn
+                .href https://bttn.surge.sh/
+
+    h2 'ANIMATIONS
+    ul
+        li
+            a 'whoa
+                .href https://www.joerezendes.com/projects/Woah.css/ 
+    

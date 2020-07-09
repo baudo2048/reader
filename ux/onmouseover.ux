@@ -1,0 +1,4 @@
+div root 'Hello :hover
+    .onmouseover ev => {root.style.backgroundColor = 'yellow';}
+    .onmouseleave ev => {root.style.backgroundColor = 'white'}
+    

@@ -2,13 +2,18 @@ export default function functionName()
 {
 var root = document.createElement('div')
 var a1 = document.createElement('button')
-a1.className= 'accordion'
-var textNode_3 = document.createTextNode('Project')
-a1.append(textNode_3)
+a1.style.color='white'
+a1.style.fontWeight='bold'
+a1.style.backgroundColor='rgb(0,0,128)'
+a1.style.width='250px'
+a1.className= 'accordion active'
+var textNode_7 = document.createTextNode('Project')
+a1.append(textNode_7)
 var panelPrj = document.createElement('div')
 
 root.appendChild(a1)
 
+panelPrj.style.display='block'
 panelPrj.style.maxHeight='500px'
 panelPrj.style.overflow='auto'
 panelPrj.className= 'panel'
@@ -37,8 +42,19 @@ for (var i = 0; i < acc.length; i++) {
 
 root.panelPrj = panelPrj
 
+document.json('files', {folder: 'default'}).then(data=>{
+    data.forEach(v=>{
+      var item = document.createElement('h5')
+      item.innerHTML = v
+      item.style.cursor = 'pointer'
+      item.onclick = ev => {
+        document.eventManager('showFile', {fileName: v, folder: 'default'})
+      }
+      panelPrj.append(item)
+    })
+})
 
-fetch('/files', {
+/* fetch('/files', {
   method: 'POST',
   headers: {'Content-Type':'application/json'},
   body: JSON.stringify({folder: 'default'})
@@ -54,6 +70,7 @@ fetch('/files', {
     }
     panelPrj.append(item)
   })
-})
+}) */
+
 return root
 }

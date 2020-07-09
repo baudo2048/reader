@@ -9,11 +9,11 @@ eventConf()
 import appEventManager from './appEventManager.js'
 document.eventManager = appEventManager
 
-import socketClient from './lib/socket/socketClient.js'
+//import socketClient from './lib/socket/socketClient.js'
 //socketClient() 
 
 // GENERATED
-import socketHandler from './socketHandler.js'
+//import socketHandler from './socketHandler.js'
 //socketHandler()
 
 import restClient from '../lib/socket/restClient.js'
@@ -24,7 +24,7 @@ document.parser = parser
 
 
 
-if(screen.width > 700){
+if(screen.width >= 700){
     document.body.appendChild(homeDesktop())
 } else {
     document.body.appendChild(indexMobile())

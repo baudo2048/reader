@@ -1,0 +1,5 @@
+div root 'Hello World CSS
+    -width 100%
+    .varName root
+    p 'e1
+    p 'e2

@@ -1,0 +1,11 @@
+div root
+    -display flex
+    -flexGrow 1
+    div tCode
+        -resize none
+        -flexGrow 1
+        -fontFamily Consolas, "Courier New", monospace
+        -fontSize 14px
+        -backgroundColor black
+        -color white
+        .contentEditable true

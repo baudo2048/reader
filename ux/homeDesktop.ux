@@ -2,24 +2,29 @@ div root
     -display flex
     -flexDirection column
     -height 100%
+    -alignContent center
 
     div header
-        -height 40px
-        button btn1
-            'OpenWindow
-        button btn2
-            'WindowDev
-        button btn3
-            'Open Component
+        button btn1 'Nuovo Progetto
+            -margin 10px
+            -backgroundColor rgb(0, 0, 128)
+            .className bttn-pill bttn-md
+        button btn2 'Editor
+            -margin 10px
+            -backgroundColor rgb(0, 255, 128)
+            .className bttn-pill bttn-md        
+        button btn3 'Paletta
+            -margin 10px
+            -backgroundColor rgb(0, 255, 128)
+            .className bttn-pill bttn-md
 
     div
         -display flex
         -flexGrow 1
         div sidebar
-            -width 200px
-            -backgroundColor cyan
+            -width 250px
             *accordion acc1
         div content
             -flexGrow 1
-            -backgroundColor green
-            'content
+            -backgroundColor #f3f3f3
+            *help

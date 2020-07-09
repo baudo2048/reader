@@ -21,6 +21,6 @@ arr.forEach( (v,i,a) => {
         td.innerHTML = v[key];
         row.appendChild(td);
     }
-    root.appendChild(row);
+    table1.appendChild(row);
 });
 

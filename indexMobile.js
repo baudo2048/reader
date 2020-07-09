@@ -5,33 +5,32 @@ root.style.display='flex'
 root.style.flexDirection='column'
 root.style.height='640px'
 root.style.width='360px'
-root.style.border='1px solid blue'
 var header = document.createElement('div')
 header.style.display='flex'
 header.style.justifyContent='flex-end'
-var div_9 = document.createElement('div')
-div_9.style.display='flex'
-div_9.style.justifyContent='center'
-div_9.style.alignContent='center'
-div_9.style.borderRadius='50%'
-div_9.style.width='36px'
-div_9.style.height='36px'
-div_9.style.textAlign='center'
+var div_8 = document.createElement('div')
+div_8.style.display='flex'
+div_8.style.justifyContent='center'
+div_8.style.alignContent='center'
+div_8.style.borderRadius='50%'
+div_8.style.width='36px'
+div_8.style.height='36px'
+div_8.style.textAlign='center'
 var coins = document.createElement('h4')
 coins.append(document.createTextNode( '1.000'))
-var img_18 = document.createElement('img')
+var imgCoins = document.createElement('img')
 
-div_9.appendChild(coins)
+div_8.appendChild(coins)
 
-img_18.style.width='36px'
-img_18.style.height='36px'
-img_18.src= './img/coins.png'
+imgCoins.style.width='36px'
+imgCoins.style.height='36px'
+imgCoins.src= './img/coins.png'
 var content = document.createElement('div')
 
-header.appendChild(div_9)
+header.appendChild(div_8)
 
 
-header.appendChild(img_18)
+header.appendChild(imgCoins)
 
 
 root.appendChild(header)
@@ -44,6 +43,7 @@ var imgSacco = document.createElement('img')
 imgSacco.style.width='60px'
 imgSacco.style.display='none'
 imgSacco.src= './img/sacco.png'
+imgSacco.className= 'dealWithIt'
 var imgHeart = document.createElement('img')
 
 content.appendChild(h1hello)
@@ -59,8 +59,19 @@ par1.append(document.createTextNode( 'Clicca sul sacchetto delle monetine'))
 content.appendChild(imgHeart)
 
 par1.style.display='none'
+var br_35 = document.createElement('br')
 
 content.appendChild(par1)
+
+var goFirstPage = document.createElement('button')
+goFirstPage.append(document.createTextNode( 'Start'))
+goFirstPage.style.display='none'
+goFirstPage.className= 'bttn-unite bttn-md'
+
+content.appendChild(br_35)
+
+
+content.appendChild(goFirstPage)
 
 
 root.appendChild(content)
@@ -89,14 +100,26 @@ contentAnimation.onfinish = ev => {
 imgSacco.onclick = ev => {
     par1.style.display = 'none'
     imgSacco.style.display = 'none'
-    h1hello.innerHTML = 'Buona Giornata! <br/> Torna domani, continua a giocare, accumula monetine'
-
+    h1hello.innerHTML = 'Welcome back!'
+    h1hello.className = 'blazingStar'
     for(var i=1000;i<=2500;i++){
         coins.innerHTML = i
     }
 
 
     imgHeart.style.display = 'initial'
+
+    coins.className = 'pulse'
+    imgCoins.className = 'pulse'
+    goFirstPage.style.display = 'initial'
+}
+
+
+goFirstPage.onclick = ev => {
+    content.innerHTML = ''
+    import('./lesson001.js').then(module => {
+    content.append(module.default())
+})
 }
 return root
 }

@@ -1,10 +1,10 @@
 div windowRoot
     -display flex
     -position fixed
-    -width 500px
-    -height 400px
-    -top 100px
-    -left 300px
+    -width 422px
+    -height 600px
+    -top 0px
+    -left 909px
     -flexDirection column
     -border 3px solid black
     -overflow none
@@ -13,19 +13,35 @@ div windowRoot
     
     div topBar
         -display flex
-        -height 20px
+        -justifyContent space-between
+        -alignItems center
         -backgroundColor #f3f3f3
-    
-        img windowImgMove 
-            .src ./img/move.png
 
-        img windowImgMaximize
-            .src ./img/maximize.png
+        div
+            -display flex
+            -alignContent center
 
-        img windowImgClose
-            .src ./img/close_black.png
+            img windowImgMove 
+                .src ./img/baseline_open_with_black_18dp.png
+
+            h1 titleName
+                -margin 0 0 0 0
+                -padding 0
+                'Title
+
+        div
+            -flexGrow 1
+
+        div
+            img windowImgMaximize
+                .src ./img/baseline_aspect_ratio_black_18dp.png
+
+            img windowImgClose
+                .src ./img/baseline_highlight_off_black_18dp.png
     
     div contentArea
+        -display flex
+        -flexGrow 1
         
 
     div resizer

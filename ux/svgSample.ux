@@ -4,6 +4,7 @@ svg root
     .viewBox 0 0 300 300
     .onclick ev => {alert('hellobay')}
     circle
+        .class blazingStar
         .cx 80
         .cy 80
         .r 30

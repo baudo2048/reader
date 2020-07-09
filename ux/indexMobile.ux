@@ -3,7 +3,6 @@ div root
     -flexDirection column
     -height 640px
     -width 360px
-    -border 1px solid blue
      
     div header
         -display flex
@@ -19,7 +18,7 @@ div root
             -textAlign center
             h4 coins '1.000
 
-        img
+        img imgCoins
             -width 36px
             -height 36px
             .src ./img/coins.png
@@ -34,6 +33,7 @@ div root
             -width 60px
             -display none
             .src ./img/sacco.png
+            .className dealWithIt
 
         img imgHeart
             -display none
@@ -41,3 +41,8 @@ div root
 
         h5 par1 'Clicca sul sacchetto delle monetine
             -display none
+
+        br
+        button goFirstPage 'Start
+            -display none
+            .className bttn-unite bttn-md

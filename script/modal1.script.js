@@ -1,5 +1,5 @@
 modal1AnnullaBtn.onclick = (ev) => {
-    document.eventManager('modal1AnnullaBtnClicked');
+    document.em('modal1AnnullaBtnClicked');
 };
 
 function showModal1(ev){

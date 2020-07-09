@@ -2,14 +2,14 @@ export default function eventManager(eventName, msg){
 if(eventName=='windowDev.imgPreviewClicked'){
 document.rest('requestCompile', msg)
 } else if (eventName == 'requestCompile.response') {
-document.dispatch('updateContent', msg)
+document.em('updateContent', msg)
 } else if (eventName == 'be4fe.compileComplete') {
-document.dispatch('updateContent', msg)
+document.em('updateContent', msg)
 } else if (eventName == 'accordion.test') {
 document.socket.send('socket.test.request', msg)
 } else if (eventName == 'socket.test.response') {
-document.dispatch('h5Response2', msg)
+document.em('h5Response2', msg)
 } else if (eventName == 'socket.compiler.done') {
-document.dispatch('updateContent', msg)
-} else {document.dispatch(eventName,msg)}
+document.em('updateContent', msg)
+} else {document.em(eventName,msg)}
 }

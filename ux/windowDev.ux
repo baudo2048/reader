@@ -1,10 +1,10 @@
 div root
     -display flex
     -position fixed
-    -width 500px
-    -height 400px
-    -top 100px
-    -left 300px
+    -width 660px
+    -height 580px
+    -top 53px
+    -left 249px
     -flexDirection column
     -border 3px solid black
     -overflow none
@@ -28,11 +28,20 @@ div root
             img imgScript
                 .src ./img/baseline_description_black_18dp.png
 
+            img imgCss
+                .src ./img/baseline_text_format_black_18dp.png
+
             img imgSaveAlt
                 .src ./img/baseline_save_black_18dp.png
             
             img imgPreview
                 .src ./img/baseline_preview_black_18dp.png
+
+            img imgDesign
+                .src ./img/baseline_design_services_black_18dp.png
+
+            img imgDownload
+                .src ./img/baseline_get_app_black_18dp.png
         
         div
             -display flex
@@ -73,6 +82,16 @@ div root
             -color white
 
         textarea textareaScript
+            -resize none
+            -width 100%
+            -height 100%
+            -fontFamily Consolas, "Courier New", monospace
+            -fontSize 14px
+            -backgroundColor black
+            -color white   
+            -display none
+
+        textarea textareaCss
             -resize none
             -width 100%
             -height 100%
