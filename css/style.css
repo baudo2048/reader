@@ -37,6 +37,66 @@ td{
     border: 1px solid #f3f3f3;
 }
 
+@media (max-width: 600px){
+  .article {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 18px;
+  
+    font-family: "Mainfont, Helvetica";
+    font-size: 24px;
+    color: #292929;
+  }
+  
+  .article h1 {
+    font-family: "Mainfont, Helvetica";
+    font-size: 36px;
+    color: #0d152b;
+  }
+
+  .article pre {
+    font-size: 8px;
+    margin: 5px;
+    background-color: #EFF0F1;
+  }
+  
+  .article code {
+    font-size: 8px;
+    background-color: #EFF0F1;
+  }
+}
+
+@media (min-width: 600px){
+
+
+  .article {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 18px;
+
+    font-family: "Mainfont, Helvetica";
+    font-size: 24px;
+    color: #292929;
+  }
+
+  .article h1 {
+    font-family: "Mainfont, Helvetica";
+    font-size: 36px;
+    color: #0d152b;
+  }
+
+  .article pre {
+    margin: 5px;
+    background-color: #EFF0F1;
+  }
+
+  .article code {
+    background-color: #EFF0F1;
+  }
+
+}
 
 
 /* Style the buttons that are used to open and close the accordion panel */
