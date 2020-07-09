@@ -1,0 +1,17 @@
+div root
+    .className article
+
+    h1 'The Footer Element
+
+    p 'Lorem ipsum coso non so menga
+
+    code
+        pre 'div root
+        pre '    -backgroundColor red
+        pre '    .onclick ev => {alert("Hello click")}
+
+    p 'Una volta capito come scrivere testo possiamo procedere alla scrittura di lunghi articoli, anche direttamente utilizzando il presente editor.
+
+    h3 'Questo è un sotto-capitolo. Sei sicuro di voler continuare?
+
+    p 'A questo punto bisogna decidere se continuare o abbandonare 
