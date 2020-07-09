@@ -114,12 +114,16 @@ imgSacco.onclick = ev => {
     goFirstPage.style.display = 'initial'
 }
 
-
+var slideCount = 0
 goFirstPage.onclick = ev => {
     content.innerHTML = ''
-    import('./lesson001.js').then(module => {
-    content.append(module.default())
-})
+
+    slideCount++
+    content.style.textAlign = 'left'
+    import('./post00'+slideCount+'.js').then(module => {
+        content.append(module.default())
+    })
 }
+
 return root
 }
