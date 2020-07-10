@@ -4,12 +4,18 @@ div root
         -fontWeight bold   
         -backgroundColor rgb(0,0,128)
         -width 250px
+        -borderRadius 25px
+        -margin 15px
         .className accordion active
         'Project
     div panelPrj
         -display block
         -maxHeight 500px
         -overflow auto
+
+        -borderRadius 25px
+        -margin 15px
+
         .className panel
 
 

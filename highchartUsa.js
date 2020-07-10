@@ -1,4 +1,25 @@
-Highcharts.chart('container', {
+export default function functionName() 
+{
+var root = document.createElement('div')
+root.id= 'container'
+root.style.height='700px'
+root.style.width='1000px'
+var script_4 = document.createElement('script')
+script_4.src= 'https://code.highcharts.com/6.0.6/highcharts.js'
+var script_6 = document.createElement('script')
+
+root.appendChild(script_4)
+
+script_6.src= 'https://code.highcharts.com/6.0.6/highcharts-more.js'
+var script_8 = document.createElement('script')
+
+root.appendChild(script_6)
+
+script_8.src= 'https://cdn.rawgit.com/mekhatria/hexagon/master/hexagon.js'
+
+root.appendChild(script_8)
+
+Highcharts.chart(root, {
 
     chart: {
         type: 'bubble',
@@ -441,3 +462,6 @@ Highcharts.chart('container', {
         }]
     }]
 });
+
+return root
+}

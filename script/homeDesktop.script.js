@@ -4,6 +4,7 @@ import paletta from './paletta.js'
 
 var wPaletta = paletta()
 content.append(wPaletta)
+wPaletta.style.display = 'none'
 
 var w2 = windowDev()
 w2.style.display = 'flex'

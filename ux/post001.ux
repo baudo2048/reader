@@ -6,9 +6,13 @@ div root
     p 'Lorem ipsum coso non so menga
 
     code
-        pre 'div root
-        pre '    -backgroundColor red
-        pre '    .onclick ev => {alert("Hello click")}
+        pre 
+            -display block
+            'div root\n
+            '    -backgroundColor red\n
+            '    .onclick ev => {alert("Hello click")}
+            '\n
+            '    h1 \'Hello World
 
     p 'Una volta capito come scrivere testo possiamo procedere alla scrittura di lunghi articoli, anche direttamente utilizzando il presente editor.
 

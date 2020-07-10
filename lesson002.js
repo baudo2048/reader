@@ -42,6 +42,8 @@ var li_12 = document.createElement('li')
 var a_13 = document.createElement('a')
 a_13.append(document.createTextNode( 'whoa'))
 a_13.href= 'https://www.joerezendes.com/projects/Woah.css/'
+var h2_15 = document.createElement('h2')
+h2_15.append(document.createTextNode( 'GRADIENTS'))
 
 li_12.appendChild(a_13)
 
@@ -53,6 +55,24 @@ root.appendChild(h2_10)
 
 
 root.appendChild(ul_11)
+
+var ul_16 = document.createElement('ul')
+var li_17 = document.createElement('li')
+var a_18 = document.createElement('a')
+a_18.append(document.createTextNode( 'cssgradient.io'))
+a_18.href= 'https://cssgradient.io/'
+
+li_17.appendChild(a_18)
+
+
+ul_16.appendChild(li_17)
+
+
+root.appendChild(h2_15)
+
+
+root.appendChild(ul_16)
+
 
 
 return root

@@ -14,4 +14,11 @@ div root
         li
             a 'whoa
                 .href https://www.joerezendes.com/projects/Woah.css/ 
+
+
+    h2 'GRADIENTS
+    ul
+        li
+            a 'cssgradient.io
+                .href https://cssgradient.io/
     

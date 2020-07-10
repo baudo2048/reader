@@ -6,9 +6,11 @@ a1.style.color='white'
 a1.style.fontWeight='bold'
 a1.style.backgroundColor='rgb(0,0,128)'
 a1.style.width='250px'
+a1.style.borderRadius='25px'
+a1.style.margin='15px'
 a1.className= 'accordion active'
-var textNode_7 = document.createTextNode('Project')
-a1.append(textNode_7)
+var textNode_9 = document.createTextNode('Project')
+a1.append(textNode_9)
 var panelPrj = document.createElement('div')
 
 root.appendChild(a1)
@@ -16,6 +18,8 @@ root.appendChild(a1)
 panelPrj.style.display='block'
 panelPrj.style.maxHeight='500px'
 panelPrj.style.overflow='auto'
+panelPrj.style.borderRadius='25px'
+panelPrj.style.margin='15px'
 panelPrj.className= 'panel'
 
 root.appendChild(panelPrj)

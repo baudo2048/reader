@@ -1,4 +1,4 @@
-Highcharts.chart('container', {
+Highcharts.chart(root, {
 
     chart: {
         type: 'bubble',

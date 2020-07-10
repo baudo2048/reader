@@ -1,7 +1,44 @@
 DIV
+    -overflow auto
+    .className article
+    -backgroundColor white
+    -maxHeight 525px
+
     H1 'Guida rapida
     H5 'Impara a programmare
     P 'Ti piacerebbe creare siti web accattivanti per laptop e mobile devices? Allora segui questa guida rapida. Impara un linguaggio semplice e intuitivo per creare applicazioni in maniera rapida. 
 
     H2 'Le basi del linguaggio
     
+    code
+        pre 'div root
+        pre '    -display flex
+        pre '    -backgroundColor red
+        pre '    h1 \'Title page
+        pre '    p \'a paragraph
+        pre '    img
+        pre '        .src ./path/to/file
+
+
+    h2 'Import script src
+    code
+        pre 'div root
+        pre '    script
+        pre '        .src https://code.highcharts.com/6.0.6/highcharts.js
+        pre '    script
+        pre '        .src https://code.highcharts.com/6.0.6/highcharts-more.js
+        pre '    script
+        pre '        .src https://cdn.rawgit.com/mekhatria/hexagon/master/hexagon.js
+
+    p 'Sarebbe utile poter scrivere (would be better if i could write):
+
+    code
+        pre 'div root
+        pre '    script https://code.highcharts.com/6.0.6/highcharts.js
+
+    p 'Get involve in this feature enhancement.
+
+    h2 'Debug component
+    p 'If your component don't show anything, just open chrome developer tools (CTRL-SHIFT-I)
+
+    p 'You need do nothing else because your component is alread deployed on editor inner dom.
