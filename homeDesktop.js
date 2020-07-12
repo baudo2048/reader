@@ -1,5 +1,5 @@
 import acc1_ from './accordion.js'
-import help_52_ from './help.js'
+import help_51_ from './help.js'
 import windowDev from './windowDev.js'
 import paletta from './paletta.js'
 export default function functionName() 
@@ -19,24 +19,23 @@ img_10.src= './img/baseline_menu_black_18dp.png'
 img_10.style.margin='3px'
 img_10.style.padding='10px'
 var btnHome = document.createElement('span')
+btnHome.append(document.createTextNode( 'Kate Code'))
 
 header.appendChild(img_10)
 
-var p_15 = document.createElement('p')
-p_15.append(document.createTextNode( 'Kate Code'))
-p_15.style.display='flex'
-p_15.style.alignContent='center'
-p_15.style.fontFamily='Segoe UI'
-p_15.style.color='white'
-p_15.style.fontWeight='bold'
-p_15.style.fontSize='15px'
-p_15.style.margin='3px'
-p_15.style.backgroundColor='transparent'
-p_15.style.padding='10px'
+btnHome.style.display='flex'
+btnHome.style.alignContent='center'
+btnHome.style.fontFamily='Segoe UI'
+btnHome.style.color='white'
+btnHome.style.fontWeight='bold'
+btnHome.style.fontSize='15px'
+btnHome.style.margin='3px'
+btnHome.style.backgroundColor='transparent'
+btnHome.style.padding='10px'
 var btn1 = document.createElement('button')
 btn1.append(document.createTextNode( 'Nuovo Progetto'))
 
-btnHome.appendChild(p_15)
+header.appendChild(btnHome)
 
 btn1.style.fontSize='12px'
 btn1.style.margin='3px'
@@ -45,9 +44,6 @@ btn1.style.padding='10px'
 btn1.className= 'bttn-pill bttn-md'
 var btn2 = document.createElement('button')
 btn2.append(document.createTextNode( 'Editor'))
-
-header.appendChild(btnHome)
-
 
 header.appendChild(btn1)
 
@@ -66,15 +62,15 @@ btn3.style.margin='3px'
 btn3.style.backgroundColor='rgb(0, 255, 128)'
 btn3.style.padding='10px'
 btn3.className= 'bttn-pill bttn-md'
-var div_43 = document.createElement('div')
+var div_42 = document.createElement('div')
 
 header.appendChild(btn3)
 
 
 root.appendChild(header)
 
-div_43.style.display='flex'
-div_43.style.flexGrow='1'
+div_42.style.display='flex'
+div_42.style.flexGrow='1'
 var sidebar = document.createElement('div')
 sidebar.style.width='250px'
 var acc1 = acc1_()
@@ -84,18 +80,18 @@ sidebar.appendChild(acc1)
 
 content.style.flexGrow='1'
 content.style.backgroundColor='#f3f3f3'
-var help_52 = help_52_()
+var help_51 = help_51_()
 
-content.appendChild(help_52)
-
-
-div_43.appendChild(sidebar)
+content.appendChild(help_51)
 
 
-div_43.appendChild(content)
+div_42.appendChild(sidebar)
 
 
-root.appendChild(div_43)
+div_42.appendChild(content)
+
+
+root.appendChild(div_42)
 
 
 

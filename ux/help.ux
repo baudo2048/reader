@@ -2,23 +2,57 @@ DIV
     -overflow auto
     .className article
     -backgroundColor white
-    -maxHeight 525px
+    -maxHeight 480px
+    -maxWidth 900px
 
-    H1 'Guida rapida
-    H5 'Impara a programmare
-    P 'Ti piacerebbe creare siti web accattivanti per laptop e mobile devices? Allora segui questa guida rapida. Impara un linguaggio semplice e intuitivo per creare applicazioni in maniera rapida. 
 
-    H2 'Le basi del linguaggio
+    H1 'Getting started
+    p 'Create interactive web application for different devices (phone, tablet, laptop) in less time as possible is not easy.
+
+
+    H2 'First example
     
     code
         pre 'div root
         pre '    -display flex
         pre '    -backgroundColor red
+        pre '    .id almostUselessInUxLang
+        pre '    .className cssClass1 cssClass2 ...
         pre '    h1 \'Title page
         pre '    p \'a paragraph
         pre '    img
         pre '        .src ./path/to/file
 
+    p 'a ux file is the representation of a rooted tree. The tree can be a model for an html document, svg document, a piece of html document (a component).
+
+
+    code
+        pre 'div root
+        pre 'div is an htmlTagName, root a varName you can use in your js file.
+        
+    br
+    code
+        pre '    -display flex
+        pre '-display is a css property written in javascript style. flex is the value of the property
+
+    br
+    code
+        pre '    -backgroundColor red
+        pre 'css property
+    br
+    code
+        pre '    .id almostUselessInUxLang
+        pre '    .className cssClass1 cssClass2 ...
+        pre 'the (.) dot is used to se the attribute of an xml tag.
+    br
+    code
+        pre '    h1 \'Title page
+        pre 'h1 is an html heading, it is root\'s element child. The symbol \' (apostrophe) is used for string.
+    br
+    code
+        pre '    p \'a paragraph
+        pre '    img
+        pre '        .src ./path/to/file
 
     h2 'Import script src
     code
@@ -39,6 +73,232 @@ DIV
     p 'Get involve in this feature enhancement.
 
     h2 'Debug component
-    p 'If your component don't show anything, just open chrome developer tools (CTRL-SHIFT-I)
+    p 'If your component don\'t show anything, just open chrome developer tools (CTRL-SHIFT-I)
 
     p 'You need do nothing else because your component is alread deployed on editor inner dom.
+
+
+    h2 'More complicated sample
+    img
+        -width 640px
+        -height 400px
+        .src ./img/windowDev.png
+    p 'this is the sample code for windowDev.ux:
+    code 
+        pre '
+        pre 'div root
+        pre '    -display flex
+        pre '    -position fixed
+        pre '    -width 660px
+        pre '    -height 580px
+        pre '    -top 53px
+        pre '    -left 249px
+        pre '    -flexDirection column
+        pre '    -border 3px solid black
+        pre '    -overflow none
+        pre '    -zIndex 100
+        pre '    -boxSizing border-box
+        pre '    
+        pre '    div topBar
+        pre '        -display flex
+        pre '        -justifyContent space-between
+        pre '        -alignItems center
+        pre '        -backgroundColor #f3f3f3
+        pre '        
+        pre '        div 
+        pre '            -display flex
+        pre '            img windowImgMove 
+        pre '                .src ./img/baseline_open_with_black_18dp.png
+        pre '
+        pre '            img imgCode
+        pre '                .src ./img/baseline_code_black_18dp.png
+        pre '
+        pre '            img imgScript
+        pre '                .src ./img/baseline_description_black_18dp.png
+        pre '
+        pre '            img imgCss
+        pre '                .src ./img/baseline_text_format_black_18dp.png
+        pre '
+        pre '            img imgSaveAlt
+        pre '                .src ./img/baseline_save_black_18dp.png
+        pre '            
+        pre '            img imgPreview
+        pre '                .src ./img/baseline_preview_black_18dp.png
+        pre '
+        pre '            img imgDesign
+        pre '                .src ./img/baseline_design_services_black_18dp.png
+        pre '
+        pre '            img imgDownload
+        pre '                .src ./img/baseline_get_app_black_18dp.png
+        pre '        
+        pre '        div
+        pre '            -display flex
+        pre '            -flexGrow 1
+        pre '            input fileName
+        pre '                -width 100%
+        pre '                -height 30px
+        pre '                -marginLeft 10px
+        pre '                -marginRight 10px
+        pre '                -fontSize large
+        pre '                .type text
+        pre '                .value fileName.ux
+        pre '        
+        pre '        div
+        pre '            -display flex
+        pre '            img windowImgMaximize
+        pre '                .src ./img/baseline_aspect_ratio_black_18dp.png
+        pre '
+        pre '            img windowImgClose
+        pre '                .src ./img/baseline_highlight_off_black_18dp.png
+        pre '    
+        pre '    div contentArea
+        pre '        -display none
+        pre '        -flexGrow 1
+        pre '        -backgroundColor white
+        pre '
+        pre '    div codeArea
+        pre '        -display flex
+        pre '        -flexGrow 1
+        pre '
+        pre '        textarea textareaCode
+        pre '            -resize none
+        pre '            -width 100%
+        pre '            -height 100%
+        pre '            -fontFamily Consolas, "Courier New", monospace
+        pre '            -fontSize 14px
+        pre '            -backgroundColor black
+        pre '            -color white
+        pre '
+        pre '        textarea textareaScript
+        pre '            -resize none
+        pre '            -width 100%
+        pre '            -height 100%
+        pre '            -fontFamily Consolas, "Courier New", monospace
+        pre '            -fontSize 14px
+        pre '            -backgroundColor black
+        pre '            -color white   
+        pre '            -display none
+        pre '
+        pre '        textarea textareaCss
+        pre '            -resize none
+        pre '            -width 100%
+        pre '            -height 100%
+        pre '            -fontFamily Consolas, "Courier New", monospace
+        pre '            -fontSize 14px
+        pre '            -backgroundColor black
+        pre '            -color white   
+        pre '            -display none
+        pre '
+        pre '    div resizer
+        pre '        -position absolute
+        pre '        -width 3px
+        pre '        -height 3px
+        pre '        -borderRadius 50%
+        pre '        -border 3px solid #4286f4
+        pre '        -right -5px
+        pre '        -bottom -5px
+        pre '        -cursor nwse-resize
+
+
+    h2 'HighCharts Example
+    p 'create an highcharts component with ux lang
+
+    p 'Example, highchartUsa.ux:
+
+    *highchartUsa
+
+    p 'ux source code (ux files are html files written with the ux language)
+
+    div
+        img 
+            .src ./img/baseline_code_black_18dp.png
+
+    code
+        pre 'div root
+        pre '    .id container
+        pre '    -height 585px
+        pre '    -width 1000px
+
+    p 'In your javascript code highcartUsa.script.js you write something like:
+    
+    div
+        img
+            .src ./img/baseline_description_black_18dp.png
+    code
+        pre 'Highcharts.chart(root, {...highchart options ...})
+
+
+    h2 'How to import a component using ux lang
+    p 'Afterward you\'ve created your own component you can reuse the component
+    p 'Here an example
+
+    code
+        pre 'div root
+        pre '    *componentName
+
+    p 'Another example:
+    code
+        pre 'div root
+        pre '    h1 \'Tilte
+        pre '    p \'Highcharts Example with ux lang
+        pre '    *highchartUsa                //you no need use .ux extension 
+
+    h2 'SVG example
+    p 'Here an example with svg. ux language is designed to work with any xml style language: html, svg, ...
+
+    code
+        pre 'svg root
+        pre '    -width 400px
+        pre '    -height 300px
+        pre '    -border 1px solid black
+        pre '    .viewBox 0 0 300 300
+        pre '    .onclick ev => {alert(\'hellobay\')}
+        pre '    circle
+        pre '        .class blazingStar
+        pre '        .cx 80
+        pre '        .cy 80
+        pre '        .r 30
+        pre '        .fill red
+
+    p ' You got something like this:
+    div
+        *svgSample
+
+
+    h2 'ux lang vs markdown
+
+    p 'markdown is a greate way to write for the web, ux is a little bit more complicated.
+    p 'ux is more powerfool regard multimediality
+    p 'in a ux file you can insert assets like images, other html components, etc. by means of a command given by the name of the ux component you use.
+    p 'for example
+
+    p '1. Create a component using the editor give by the following img
+
+    div
+        img
+            .src ./img/baseline_code_black_18dp.png
+
+    p 'insert the following code:
+    code
+    pre 'h1 \'Hello component
+    p 'save the component as hello.ux
+
+    p 'then come back to your blog post and write:
+
+    code
+        pre 'div root
+        pre '    -border 1px solid black
+        pre '    h1 \'This is my blog post
+        pre '    p \'Here the result of my component
+        pre '    *hello
+
+    p 'you got:
+
+    div
+        -border 1px solid black
+        h1 'Hello component
+
+    p 'if you use the integrated editor click the preview button:
+    div
+        img
+            .src ./img/baseline_preview_black_18dp.png

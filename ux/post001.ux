@@ -1,9 +1,25 @@
 div root
     .className article
 
-    h1 'The Footer Element
+    h1 'How to generate a working single html page web app.
 
-    p 'Lorem ipsum coso non so menga
+    p 'Do you want to create a running application as fast as possible?
+
+    p 'You need what follow:
+
+    p '1. A detailed sketch of what you want to do. Could be a piece of paper or a word document doesn\'t matter
+
+    p '2. A language to convert your idea to a running web app. So we use uxlang a language for fast prototaping.
+
+    p '3. Skills: javascript, css, html, ... How many time you\'ve searched for solution to problem you can solve with a bunch of line of code.
+
+    p '4. A visual tools to construct application from component. You have a list of (check because sometimes code contains errors) reusable component.  
+
+    h1 'What you can do with kate code?
+    p 'Kate Code helps you split the component to the following files:
+    p '1. component.ux 
+    p '2. component.script.js
+    p '3. component.css.js
 
     code
         pre 

@@ -33,7 +33,7 @@ Highcharts.chart(root, {
     tooltip: {
         useHTML: true,
         headerFormat: null,
-        pointFormat: '- State of <b>{point.USstate}</b><br/> - The <b>{point.region}</b> region<br/> <b>- {point.capital}</b> is the captal<br/> '
+        pointFormat: '- State of <b>{point.USstate}</b><br/> - The <b>{point.region}</b> region<br/> <b>- {point.capital}</b><br><b> - core</b><br/> '
     },
     xAxis: {
         lineWidth: 0,
@@ -67,9 +67,10 @@ Highcharts.chart(root, {
 
     series: [{
         data: [{
-            y: 1,
-            USstate: "HI",
-            capital: "Honolulu",
+            x: 25,
+            y: 9,
+            USstate: "MS1",
+            capital: "fidi-documenti-v1",
             color: "#2962ff",
             region: "west"
         }, {
@@ -82,7 +83,7 @@ Highcharts.chart(root, {
         }]
     }, {
         data: [{
-            x: 7,
+            x: 9,
             y: 2,
             USstate: "TX",
             capital: "Austin",

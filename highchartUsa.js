@@ -2,23 +2,8 @@ export default function functionName()
 {
 var root = document.createElement('div')
 root.id= 'container'
-root.style.height='700px'
+root.style.height='585px'
 root.style.width='1000px'
-var script_4 = document.createElement('script')
-script_4.src= 'https://code.highcharts.com/6.0.6/highcharts.js'
-var script_6 = document.createElement('script')
-
-root.appendChild(script_4)
-
-script_6.src= 'https://code.highcharts.com/6.0.6/highcharts-more.js'
-var script_8 = document.createElement('script')
-
-root.appendChild(script_6)
-
-script_8.src= 'https://cdn.rawgit.com/mekhatria/hexagon/master/hexagon.js'
-
-root.appendChild(script_8)
-
 Highcharts.chart(root, {
 
     chart: {
@@ -54,7 +39,7 @@ Highcharts.chart(root, {
     tooltip: {
         useHTML: true,
         headerFormat: null,
-        pointFormat: '- State of <b>{point.USstate}</b><br/> - The <b>{point.region}</b> region<br/> <b>- {point.capital}</b> is the captal<br/> '
+        pointFormat: '- State of <b>{point.USstate}</b><br/> - The <b>{point.region}</b> region<br/> <b>- {point.capital}</b><br><b> - core</b><br/> '
     },
     xAxis: {
         lineWidth: 0,
@@ -88,9 +73,10 @@ Highcharts.chart(root, {
 
     series: [{
         data: [{
-            y: 1,
-            USstate: "HI",
-            capital: "Honolulu",
+            x: 25,
+            y: 9,
+            USstate: "MS1",
+            capital: "fidi-documenti-v1",
             color: "#2962ff",
             region: "west"
         }, {
@@ -103,7 +89,7 @@ Highcharts.chart(root, {
         }]
     }, {
         data: [{
-            x: 7,
+            x: 9,
             y: 2,
             USstate: "TX",
             capital: "Austin",

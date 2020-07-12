@@ -1,13 +1,7 @@
 div root
     .id container
-    -height 700px
+    -height 585px
     -width 1000px
-    script
-        .src https://code.highcharts.com/6.0.6/highcharts.js
-    script
-        .src https://code.highcharts.com/6.0.6/highcharts-more.js
-    script
-        .src https://cdn.rawgit.com/mekhatria/hexagon/master/hexagon.js
 
 
 

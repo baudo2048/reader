@@ -10,7 +10,7 @@ div root
         'Project
     div panelPrj
         -display block
-        -maxHeight 500px
+        -maxHeight 400px
         -overflow auto
 
         -borderRadius 25px

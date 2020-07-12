@@ -61,6 +61,12 @@ imgCode.onclick = ev => {
     textareaScript.style.display = 'none'
     textareaCss.style.display = 'none'
     contentArea.style.display = 'none'
+
+    imgCode.style.backgroundColor = 'green'    
+    imgScript.style.backgroundColor = 'initial'
+    imgCss.style.backgroundColor = 'initial'
+
+    textareaCode.focus()
 }
 
 imgScript.onclick = ev => {
@@ -69,6 +75,12 @@ imgScript.onclick = ev => {
     textareaScript.style.display = 'block'
     textareaCss.style.display = 'none'
     contentArea.style.display = 'none'
+
+    imgCode.style.backgroundColor = 'initial'    
+    imgScript.style.backgroundColor = 'blue'
+    imgCss.style.backgroundColor = 'initial'
+
+    textareaScript.focus()
 }
 
 imgCss.onclick = ev => {
@@ -77,6 +89,12 @@ imgCss.onclick = ev => {
     textareaScript.style.display = 'none'
     textareaCss.style.display = 'block'
     contentArea.style.display = 'none'
+
+    imgCode.style.backgroundColor = 'initial'    
+    imgScript.style.backgroundColor = 'initial'
+    imgCss.style.backgroundColor = 'red'
+
+    textareaCss.focus()
 }
 
 var count = 0

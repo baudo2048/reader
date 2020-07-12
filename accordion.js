@@ -16,7 +16,7 @@ var panelPrj = document.createElement('div')
 root.appendChild(a1)
 
 panelPrj.style.display='block'
-panelPrj.style.maxHeight='500px'
+panelPrj.style.maxHeight='400px'
 panelPrj.style.overflow='auto'
 panelPrj.style.borderRadius='25px'
 panelPrj.style.margin='15px'

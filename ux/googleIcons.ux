@@ -1,0 +1,11 @@
+div root
+    -backgroundColor black
+    -backgroundColor white
+    i 'face
+        .className material-icons md-48
+
+    span 'code
+        .className material-icons md-48 white
+
+    img
+        .src ./img/baseline_code_white_18dp.png

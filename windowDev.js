@@ -25,7 +25,10 @@ var imgCode = document.createElement('img')
 
 div_17.appendChild(windowImgMove)
 
-imgCode.src= './img/baseline_code_black_18dp.png'
+imgCode.style.cursor='pointer'
+imgCode.onmouseover = ev => {imgCode.src="./img/baseline_code_black_18dp.png"}
+imgCode.onmouseleave = ev => {imgCode.src="./img/baseline_code_white_18dp.png"}
+imgCode.src= './img/baseline_code_white_18dp.png'
 var imgScript = document.createElement('img')
 
 div_17.appendChild(imgCode)
@@ -56,15 +59,15 @@ var imgDownload = document.createElement('img')
 div_17.appendChild(imgDesign)
 
 imgDownload.src= './img/baseline_get_app_black_18dp.png'
-var div_35 = document.createElement('div')
+var div_38 = document.createElement('div')
 
 div_17.appendChild(imgDownload)
 
 
 topBar.appendChild(div_17)
 
-div_35.style.display='flex'
-div_35.style.flexGrow='1'
+div_38.style.display='flex'
+div_38.style.flexGrow='1'
 var fileName = document.createElement('input')
 fileName.style.width='100%'
 fileName.style.height='30px'
@@ -73,27 +76,29 @@ fileName.style.marginRight='10px'
 fileName.style.fontSize='large'
 fileName.type= 'text'
 fileName.value= 'fileName.ux'
-var div_46 = document.createElement('div')
+var div_49 = document.createElement('div')
 
-div_35.appendChild(fileName)
+div_38.appendChild(fileName)
 
 
-topBar.appendChild(div_35)
+topBar.appendChild(div_38)
 
-div_46.style.display='flex'
+div_49.style.display='flex'
 var windowImgMaximize = document.createElement('img')
+windowImgMaximize.style.cursor='pointer'
 windowImgMaximize.src= './img/baseline_aspect_ratio_black_18dp.png'
 var windowImgClose = document.createElement('img')
 
-div_46.appendChild(windowImgMaximize)
+div_49.appendChild(windowImgMaximize)
 
+windowImgClose.style.cursor='pointer'
 windowImgClose.src= './img/baseline_highlight_off_black_18dp.png'
 var contentArea = document.createElement('div')
 
-div_46.appendChild(windowImgClose)
+div_49.appendChild(windowImgClose)
 
 
-topBar.appendChild(div_46)
+topBar.appendChild(div_49)
 
 
 root.appendChild(topBar)
@@ -220,6 +225,12 @@ imgCode.onclick = ev => {
     textareaScript.style.display = 'none'
     textareaCss.style.display = 'none'
     contentArea.style.display = 'none'
+
+    imgCode.style.backgroundColor = 'green'    
+    imgScript.style.backgroundColor = 'initial'
+    imgCss.style.backgroundColor = 'initial'
+
+    textareaCode.focus()
 }
 
 imgScript.onclick = ev => {
@@ -228,6 +239,12 @@ imgScript.onclick = ev => {
     textareaScript.style.display = 'block'
     textareaCss.style.display = 'none'
     contentArea.style.display = 'none'
+
+    imgCode.style.backgroundColor = 'initial'    
+    imgScript.style.backgroundColor = 'blue'
+    imgCss.style.backgroundColor = 'initial'
+
+    textareaScript.focus()
 }
 
 imgCss.onclick = ev => {
@@ -236,6 +253,12 @@ imgCss.onclick = ev => {
     textareaScript.style.display = 'none'
     textareaCss.style.display = 'block'
     contentArea.style.display = 'none'
+
+    imgCode.style.backgroundColor = 'initial'    
+    imgScript.style.backgroundColor = 'initial'
+    imgCss.style.backgroundColor = 'red'
+
+    textareaCss.focus()
 }
 
 var count = 0
