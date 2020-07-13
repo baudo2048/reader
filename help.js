@@ -1,15 +1,15 @@
-import highchartUsa_185_ from './highchartUsa.js'
 import svgSample_230_ from './svgSample.js'
+import downloadFile_265_ from './downloadFile.js'
 export default function functionName() 
 {
-var DIV_0 = document.createElement('DIV')
-DIV_0.style.overflow='auto'
-DIV_0.className= 'article'
-DIV_0.style.backgroundColor='white'
-DIV_0.style.maxHeight='480px'
-DIV_0.style.maxWidth='900px'
-var H1_6 = document.createElement('H1')
-H1_6.append(document.createTextNode( 'Getting started'))
+var div_0 = document.createElement('div')
+div_0.style.display='flex'
+div_0.style.flexBasis='100%'
+div_0.style.overflow='auto'
+div_0.className= 'article'
+div_0.style.backgroundColor='white'
+var h1_6 = document.createElement('h1')
+h1_6.append(document.createTextNode( 'Getting started'))
 var p_7 = document.createElement('p')
 p_7.append(document.createTextNode( 'Create interactive web application for different devices (phone, tablet, laptop) in less time as possible is not easy.'))
 var H2_8 = document.createElement('H2')
@@ -211,82 +211,82 @@ img_63.src= './img/windowDev.png'
 var p_67 = document.createElement('p')
 p_67.append(document.createTextNode( 'this is the sample code for windowDev.ux:'))
 
-DIV_0.appendChild(H1_6)
+div_0.appendChild(h1_6)
 
 
-DIV_0.appendChild(p_7)
+div_0.appendChild(p_7)
 
 
-DIV_0.appendChild(H2_8)
+div_0.appendChild(H2_8)
 
 
-DIV_0.appendChild(code_9)
+div_0.appendChild(code_9)
 
 
-DIV_0.appendChild(p_19)
+div_0.appendChild(p_19)
 
 
-DIV_0.appendChild(code_20)
+div_0.appendChild(code_20)
 
 
-DIV_0.appendChild(br_23)
+div_0.appendChild(br_23)
 
 
-DIV_0.appendChild(code_24)
+div_0.appendChild(code_24)
 
 
-DIV_0.appendChild(br_27)
+div_0.appendChild(br_27)
 
 
-DIV_0.appendChild(code_28)
+div_0.appendChild(code_28)
 
 
-DIV_0.appendChild(br_31)
+div_0.appendChild(br_31)
 
 
-DIV_0.appendChild(code_32)
+div_0.appendChild(code_32)
 
 
-DIV_0.appendChild(br_36)
+div_0.appendChild(br_36)
 
 
-DIV_0.appendChild(code_37)
+div_0.appendChild(code_37)
 
 
-DIV_0.appendChild(br_40)
+div_0.appendChild(br_40)
 
 
-DIV_0.appendChild(code_41)
+div_0.appendChild(code_41)
 
 
-DIV_0.appendChild(h2_45)
+div_0.appendChild(h2_45)
 
 
-DIV_0.appendChild(code_46)
+div_0.appendChild(code_46)
 
 
-DIV_0.appendChild(p_54)
+div_0.appendChild(p_54)
 
 
-DIV_0.appendChild(code_55)
+div_0.appendChild(code_55)
 
 
-DIV_0.appendChild(p_58)
+div_0.appendChild(p_58)
 
 
-DIV_0.appendChild(h2_59)
+div_0.appendChild(h2_59)
 
 
-DIV_0.appendChild(p_60)
+div_0.appendChild(p_60)
 
 
-DIV_0.appendChild(p_61)
+div_0.appendChild(p_61)
 
 
-DIV_0.appendChild(h2_62)
+div_0.appendChild(h2_62)
 
 
-DIV_0.appendChild(img_63)
+div_0.appendChild(img_63)
 
 var code_68 = document.createElement('code')
 var pre_69 = document.createElement('pre')
@@ -860,7 +860,8 @@ var p_183 = document.createElement('p')
 p_183.append(document.createTextNode( 'create an highcharts component with ux lang'))
 var p_184 = document.createElement('p')
 p_184.append(document.createTextNode( 'Example, highchartUsa.ux:'))
-var highchartUsa_185 = highchartUsa_185_()
+var p_185 = document.createElement('p')
+p_185.append(document.createTextNode( '*highchartUsa'))
 var p_186 = document.createElement('p')
 p_186.append(document.createTextNode( 'ux source code (ux files are html files written with the ux language)'))
 var div_187 = document.createElement('div')
@@ -871,28 +872,28 @@ var code_190 = document.createElement('code')
 div_187.appendChild(img_188)
 
 
-DIV_0.appendChild(p_67)
+div_0.appendChild(p_67)
 
 
-DIV_0.appendChild(code_68)
+div_0.appendChild(code_68)
 
 
-DIV_0.appendChild(h2_182)
+div_0.appendChild(h2_182)
 
 
-DIV_0.appendChild(p_183)
+div_0.appendChild(p_183)
 
 
-DIV_0.appendChild(p_184)
+div_0.appendChild(p_184)
 
 
-DIV_0.appendChild(highchartUsa_185)
+div_0.appendChild(p_185)
 
 
-DIV_0.appendChild(p_186)
+div_0.appendChild(p_186)
 
 
-DIV_0.appendChild(div_187)
+div_0.appendChild(div_187)
 
 var pre_191 = document.createElement('pre')
 pre_191.append(document.createTextNode( 'div root'))
@@ -924,13 +925,13 @@ var code_199 = document.createElement('code')
 div_196.appendChild(img_197)
 
 
-DIV_0.appendChild(code_190)
+div_0.appendChild(code_190)
 
 
-DIV_0.appendChild(p_195)
+div_0.appendChild(p_195)
 
 
-DIV_0.appendChild(div_196)
+div_0.appendChild(div_196)
 
 var pre_200 = document.createElement('pre')
 pre_200.append(document.createTextNode( 'Highcharts.chart(root, {...highchart options ...})'))
@@ -1070,61 +1071,61 @@ p_240.append(document.createTextNode( 'insert the following code:'))
 div_237.appendChild(img_238)
 
 
-DIV_0.appendChild(code_199)
+div_0.appendChild(code_199)
 
 
-DIV_0.appendChild(h2_201)
+div_0.appendChild(h2_201)
 
 
-DIV_0.appendChild(p_202)
+div_0.appendChild(p_202)
 
 
-DIV_0.appendChild(p_203)
+div_0.appendChild(p_203)
 
 
-DIV_0.appendChild(code_204)
+div_0.appendChild(code_204)
 
 
-DIV_0.appendChild(p_207)
+div_0.appendChild(p_207)
 
 
-DIV_0.appendChild(code_208)
+div_0.appendChild(code_208)
 
 
-DIV_0.appendChild(h2_213)
+div_0.appendChild(h2_213)
 
 
-DIV_0.appendChild(p_214)
+div_0.appendChild(p_214)
 
 
-DIV_0.appendChild(code_215)
+div_0.appendChild(code_215)
 
 
-DIV_0.appendChild(p_228)
+div_0.appendChild(p_228)
 
 
-DIV_0.appendChild(div_229)
+div_0.appendChild(div_229)
 
 
-DIV_0.appendChild(h2_231)
+div_0.appendChild(h2_231)
 
 
-DIV_0.appendChild(p_232)
+div_0.appendChild(p_232)
 
 
-DIV_0.appendChild(p_233)
+div_0.appendChild(p_233)
 
 
-DIV_0.appendChild(p_234)
+div_0.appendChild(p_234)
 
 
-DIV_0.appendChild(p_235)
+div_0.appendChild(p_235)
 
 
-DIV_0.appendChild(p_236)
+div_0.appendChild(p_236)
 
 
-DIV_0.appendChild(div_237)
+div_0.appendChild(div_237)
 
 var code_241 = document.createElement('code')
 var pre_242 = document.createElement('pre')
@@ -1173,40 +1174,76 @@ div_252.appendChild(h1_254)
 var div_256 = document.createElement('div')
 var img_257 = document.createElement('img')
 img_257.src= './img/baseline_preview_black_18dp.png'
+var h2_259 = document.createElement('h2')
+h2_259.append(document.createTextNode( 'How to create a file and generate a download with ux lang'))
 
 div_256.appendChild(img_257)
 
 
-DIV_0.appendChild(p_240)
+div_0.appendChild(p_240)
 
 
-DIV_0.appendChild(code_241)
+div_0.appendChild(code_241)
 
 
-DIV_0.appendChild(pre_242)
+div_0.appendChild(pre_242)
 
 
-DIV_0.appendChild(p_243)
+div_0.appendChild(p_243)
 
 
-DIV_0.appendChild(p_244)
+div_0.appendChild(p_244)
 
 
-DIV_0.appendChild(code_245)
+div_0.appendChild(code_245)
 
 
-DIV_0.appendChild(p_251)
+div_0.appendChild(p_251)
 
 
-DIV_0.appendChild(div_252)
+div_0.appendChild(div_252)
 
 
-DIV_0.appendChild(p_255)
+div_0.appendChild(p_255)
 
 
-DIV_0.appendChild(div_256)
+div_0.appendChild(div_256)
+
+var code_260 = document.createElement('code')
+var pre_261 = document.createElement('pre')
+pre_261.append(document.createTextNode( 'a \'click to download'))
+var pre_262 = document.createElement('pre')
+pre_262.append(document.createTextNode( '    .href data:text/plain;charset=utf-8,Hello content file... //encodeURIComponent(text)'))
+var pre_263 = document.createElement('pre')
+pre_263.append(document.createTextNode( '    .download sampleFileNameToDownload.txt'))
+var p_264 = document.createElement('p')
+p_264.append(document.createTextNode( 'You see something like this.'))
+
+code_260.appendChild(pre_261)
+
+
+code_260.appendChild(pre_262)
+
+
+code_260.appendChild(pre_263)
+
+var downloadFile_265 = downloadFile_265_()
+downloadFile_265.style.border='1px solid black'
+
+div_0.appendChild(h2_259)
+
+
+div_0.appendChild(code_260)
+
+
+div_0.appendChild(p_264)
+
+
+div_0.appendChild(downloadFile_265)
+
+//var w = windowDev.getCalculated width
 
 
 
-return DIV_0
+return div_0
 }

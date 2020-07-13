@@ -62,7 +62,7 @@ imgCode.onclick = ev => {
     textareaCss.style.display = 'none'
     contentArea.style.display = 'none'
 
-    imgCode.style.backgroundColor = 'green'    
+    imgCode.style.backgroundColor = 'blue'    
     imgScript.style.backgroundColor = 'initial'
     imgCss.style.backgroundColor = 'initial'
 
@@ -160,8 +160,17 @@ imgSaveAlt.onhover = ev => {
 imgSaveAlt.onclick = ev => {
     imgSaveAlt.style.backgroundColor = 'red'
 
+    document.json('commitStore',document.store).then(data=> console.log('store saved - ' + JSON.stringify(data)) )
+
     document.json('saveAs', {fileName:fileName.value, code:textareaCode.value, scriptCode:textareaScript.value, cssCode:textareaCss.value}).then(data=>{
         console.log('saved')
+        if(data.esito=='done'){
+            //TOOLTIP SAVED
+        } else {
+            //login
+            //Home Desktop deve allegare la window di login
+            document.em('homeDesktop.showLogin')
+        }
     })
 
 /*     fetch('/saveAs', {
@@ -281,6 +290,7 @@ document.register('showFile', ev=>{
             var dom = module.default()
             contentArea.innerHTML = ''
             contentArea.append(dom)
+            root.style.display = 'flex'
         })        
     })
 
@@ -352,3 +362,15 @@ imgDownload.onclick = ev => {
     alert('Work in progress')
 }
 
+
+textareaCode.value = "div root\n    h1 'Hello World\n    a 'kate-code\n        .href http://katecode.herokuapp.com"
+
+textareaScript.value = "root.style.backgroundColor = 'blue'"
+
+
+
+//            img imgCode
+//                -cursor pointer
+//                .onmouseover ev => {imgCode.src="./img/baseline_code_black_18dp.png"}
+//                .onmouseleave ev => {imgCode.src="./img/baseline_code_white_18dp.png"}
+//                .src ./img/baseline_code_white_18dp.png

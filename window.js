@@ -158,5 +158,6 @@ makeMovableDiv(windowRoot, windowImgMove);
 windowRoot.contentArea = contentArea
 windowRoot.titleName = titleName
 
+
 return windowRoot
 }

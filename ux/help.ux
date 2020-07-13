@@ -1,12 +1,12 @@
-DIV
+div
+    -display flex
+    -flexBasis 100%
     -overflow auto
     .className article
     -backgroundColor white
-    -maxHeight 480px
-    -maxWidth 900px
 
 
-    H1 'Getting started
+    h1 'Getting started
     p 'Create interactive web application for different devices (phone, tablet, laptop) in less time as possible is not easy.
 
 
@@ -205,7 +205,7 @@ DIV
 
     p 'Example, highchartUsa.ux:
 
-    *highchartUsa
+    p '*highchartUsa
 
     p 'ux source code (ux files are html files written with the ux language)
 
@@ -302,3 +302,15 @@ DIV
     div
         img
             .src ./img/baseline_preview_black_18dp.png
+
+    h2 'How to create a file and generate a download with ux lang
+    code
+        pre 'a \'click to download
+        pre '    .href data:text/plain;charset=utf-8,Hello content file... //encodeURIComponent(text)
+        pre '    .download sampleFileNameToDownload.txt
+
+    p 'You see something like this.
+
+    *downloadFile
+        -border 1px solid black
+   

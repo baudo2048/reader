@@ -1,0 +1,5 @@
+div root
+    h1 'How to create a file and generate a download with ux lang
+    a 'click to download
+        .href data:text/plain;charset=utf-8,Hello content file... //encodeURIComponent(text)
+        .download sampleFileNameToDownload.txt

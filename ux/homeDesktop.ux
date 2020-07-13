@@ -9,46 +9,78 @@ div root
     div header
         -display flex
         -alignContent center
-        img
-            .src ./img/baseline_menu_black_18dp.png
-            -margin 3px
-            -padding 10px
+
+
         span btnHome 'Kate Code
             -display flex
             -alignContent center
             -fontFamily Segoe UI
             -color white
             -fontWeight bold
-            -fontSize 15px
+            -fontSize 13px
             -margin 3px
+            -maxHeight 30px
             -backgroundColor transparent
             -padding 10px
-        button btn1 'Nuovo Progetto
+        button btn1 '+ New Project
             -fontSize 12px
             -margin 3px
+            -maxHeight 30px
             -backgroundColor rgb(0, 0, 128)
             -padding 10px
             .className bttn-pill bttn-md
-        button btn2 'Editor
+        button ctaExplore 'Explore
             -fontSize 12px
             -margin 3px
-            -backgroundColor rgb(0, 255, 128)
+            -maxHeight 30px
             -padding 10px
-            .className bttn-pill bttn-md        
+            -backgroundColor #BDF6E2
+            -fontWeight bold
+            -color #1c1c1c
+            -cursor pointer
+        button btn2 'Editor
+            -fontSize 12px
+            -minWidth 60px
+            -maxHeight 30px
+            -margin 3px
+            -padding 10px
+            -backgroundColor rgb(66, 184, 221)
+            -fontWeight bold
+            -color white    
+            -cursor pointer
         button btn3 'Paletta
             -fontSize 12px
+            -minWidth 60px
+            -maxHeight 30px
             -margin 3px
             -backgroundColor rgb(0, 255, 128)
             -padding 10px
             .className bttn-pill bttn-md
+        button btnHelp 'Getting started
+            -minWidth 60px
+            -maxHeight 30px
+            -fontSize 12px
+            -margin 3px
+            -padding 10px
+            -backgroundColor rgb(66, 184, 221)
+            -fontWeight bold
+            -color white 
+            -cursor pointer       
 
     div
         -display flex
         -flexGrow 1
         div sidebar
+            -display flex
+            -flexDirection column
+            -justifyContent flex-start
+            -alignContent flex-start
             -width 250px
+            *searchComponent
+                -margin 30px auto
             *accordion acc1
         div content
+            -display flex
+            -overflow auto
             -flexGrow 1
             -backgroundColor #f3f3f3
-            *help

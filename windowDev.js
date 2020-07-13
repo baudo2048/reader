@@ -2,14 +2,12 @@ export default function functionName()
 {
 var root = document.createElement('div')
 root.style.display='flex'
-root.style.position='fixed'
+root.style.flexBasis='100%'
 root.style.width='660px'
 root.style.height='580px'
-root.style.top='53px'
-root.style.left='249px'
 root.style.flexDirection='column'
 root.style.border='3px solid black'
-root.style.overflow='none'
+root.style.overflow='auto'
 root.style.zIndex='100'
 root.style.boxSizing='border-box'
 var topBar = document.createElement('div')
@@ -17,57 +15,86 @@ topBar.style.display='flex'
 topBar.style.justifyContent='space-between'
 topBar.style.alignItems='center'
 topBar.style.backgroundColor='#f3f3f3'
-var div_17 = document.createElement('div')
-div_17.style.display='flex'
+var div_15 = document.createElement('div')
+div_15.style.display='flex'
 var windowImgMove = document.createElement('img')
 windowImgMove.src= './img/baseline_open_with_black_18dp.png'
-var imgCode = document.createElement('img')
+var ctaNewComp = document.createElement('button')
+ctaNewComp.append(document.createTextNode( '+ new'))
 
-div_17.appendChild(windowImgMove)
+div_15.appendChild(windowImgMove)
 
-imgCode.style.cursor='pointer'
-imgCode.onmouseover = ev => {imgCode.src="./img/baseline_code_black_18dp.png"}
-imgCode.onmouseleave = ev => {imgCode.src="./img/baseline_code_white_18dp.png"}
-imgCode.src= './img/baseline_code_white_18dp.png'
-var imgScript = document.createElement('img')
+ctaNewComp.style.marginLeft='20px'
+ctaNewComp.style.marginTop='5px'
+ctaNewComp.style.maringBottom='5px'
+ctaNewComp.style.fontFamily='"Open Sans", "Courier New"'
+ctaNewComp.style.fontSize='20px'
+ctaNewComp.style.fontWeight='bold'
+ctaNewComp.style.backgroundColor='rgb(0, 140, 186)'
+ctaNewComp.style.color='white'
+ctaNewComp.title= 'Create New Component'
+var imgCode = document.createElement('button')
+imgCode.append(document.createTextNode( '{html}'))
 
-div_17.appendChild(imgCode)
+div_15.appendChild(ctaNewComp)
 
-imgScript.src= './img/baseline_description_black_18dp.png'
+imgCode.style.marginLeft='20px'
+imgCode.style.marginTop='5px'
+imgCode.style.maringBottom='5px'
+imgCode.style.fontFamily='"Open Sans", "Courier New"'
+imgCode.style.fontSize='20px'
+imgCode.style.fontWeight='bold'
+imgCode.style.backgroundColor='rgb(0, 140, 186)'
+imgCode.style.color='white'
+var imgScript = document.createElement('button')
+imgScript.append(document.createTextNode( '{js}'))
+
+div_15.appendChild(imgCode)
+
+imgScript.style.marginLeft='20px'
+imgScript.style.marginTop='5px'
+imgScript.style.maringBottom='5px'
+imgScript.style.fontFamily='"Courier New"'
+imgScript.style.fontSize='22px'
 var imgCss = document.createElement('img')
 
-div_17.appendChild(imgScript)
+div_15.appendChild(imgScript)
 
 imgCss.src= './img/baseline_text_format_black_18dp.png'
 var imgSaveAlt = document.createElement('img')
 
-div_17.appendChild(imgCss)
+div_15.appendChild(imgCss)
 
+imgSaveAlt.style.cursor='pointer'
 imgSaveAlt.src= './img/baseline_save_black_18dp.png'
-var imgPreview = document.createElement('img')
+var imgPreview = document.createElement('button')
+imgPreview.append(document.createTextNode( 'Preview'))
 
-div_17.appendChild(imgSaveAlt)
+div_15.appendChild(imgSaveAlt)
 
-imgPreview.src= './img/baseline_preview_black_18dp.png'
+imgPreview.style.marginRight='20px'
+imgPreview.style.marginLeft='20px'
+imgPreview.style.marginTop='5px'
+imgPreview.style.maringBottom='5px'
 var imgDesign = document.createElement('img')
 
-div_17.appendChild(imgPreview)
+div_15.appendChild(imgPreview)
 
 imgDesign.src= './img/baseline_design_services_black_18dp.png'
 var imgDownload = document.createElement('img')
 
-div_17.appendChild(imgDesign)
+div_15.appendChild(imgDesign)
 
 imgDownload.src= './img/baseline_get_app_black_18dp.png'
-var div_38 = document.createElement('div')
+var div_58 = document.createElement('div')
 
-div_17.appendChild(imgDownload)
+div_15.appendChild(imgDownload)
 
 
-topBar.appendChild(div_17)
+topBar.appendChild(div_15)
 
-div_38.style.display='flex'
-div_38.style.flexGrow='1'
+div_58.style.display='flex'
+div_58.style.flexGrow='1'
 var fileName = document.createElement('input')
 fileName.style.width='100%'
 fileName.style.height='30px'
@@ -75,36 +102,38 @@ fileName.style.marginLeft='10px'
 fileName.style.marginRight='10px'
 fileName.style.fontSize='large'
 fileName.type= 'text'
-fileName.value= 'fileName.ux'
-var div_49 = document.createElement('div')
+fileName.value= 'componentName.ux'
+var div_69 = document.createElement('div')
 
-div_38.appendChild(fileName)
+div_58.appendChild(fileName)
 
 
-topBar.appendChild(div_38)
+topBar.appendChild(div_58)
 
-div_49.style.display='flex'
+div_69.style.display='flex'
 var windowImgMaximize = document.createElement('img')
 windowImgMaximize.style.cursor='pointer'
 windowImgMaximize.src= './img/baseline_aspect_ratio_black_18dp.png'
 var windowImgClose = document.createElement('img')
 
-div_49.appendChild(windowImgMaximize)
+div_69.appendChild(windowImgMaximize)
 
 windowImgClose.style.cursor='pointer'
 windowImgClose.src= './img/baseline_highlight_off_black_18dp.png'
 var contentArea = document.createElement('div')
 
-div_49.appendChild(windowImgClose)
+div_69.appendChild(windowImgClose)
 
 
-topBar.appendChild(div_49)
+topBar.appendChild(div_69)
 
 
 root.appendChild(topBar)
 
+contentArea.style.display='flex'
 contentArea.style.display='none'
 contentArea.style.flexGrow='1'
+contentArea.style.overflow='auto'
 contentArea.style.backgroundColor='white'
 var codeArea = document.createElement('div')
 
@@ -226,7 +255,7 @@ imgCode.onclick = ev => {
     textareaCss.style.display = 'none'
     contentArea.style.display = 'none'
 
-    imgCode.style.backgroundColor = 'green'    
+    imgCode.style.backgroundColor = 'blue'    
     imgScript.style.backgroundColor = 'initial'
     imgCss.style.backgroundColor = 'initial'
 
@@ -324,8 +353,17 @@ imgSaveAlt.onhover = ev => {
 imgSaveAlt.onclick = ev => {
     imgSaveAlt.style.backgroundColor = 'red'
 
+    document.json('commitStore',document.store).then(data=> console.log('store saved - ' + JSON.stringify(data)) )
+
     document.json('saveAs', {fileName:fileName.value, code:textareaCode.value, scriptCode:textareaScript.value, cssCode:textareaCss.value}).then(data=>{
         console.log('saved')
+        if(data.esito=='done'){
+            //TOOLTIP SAVED
+        } else {
+            //login
+            //Home Desktop deve allegare la window di login
+            document.em('homeDesktop.showLogin')
+        }
     })
 
 /*     fetch('/saveAs', {
@@ -445,6 +483,7 @@ document.register('showFile', ev=>{
             var dom = module.default()
             contentArea.innerHTML = ''
             contentArea.append(dom)
+            root.style.display = 'flex'
         })        
     })
 
@@ -517,6 +556,17 @@ imgDownload.onclick = ev => {
 }
 
 
+textareaCode.value = "div root\n    h1 'Hello World\n    a 'kate-code\n        .href http://katecode.herokuapp.com"
+
+textareaScript.value = "root.style.backgroundColor = 'blue'"
+
+
+
+//            img imgCode
+//                -cursor pointer
+//                .onmouseover ev => {imgCode.src="./img/baseline_code_black_18dp.png"}
+//                .onmouseleave ev => {imgCode.src="./img/baseline_code_white_18dp.png"}
+//                .src ./img/baseline_code_white_18dp.png
 
 return root
 }

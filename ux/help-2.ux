@@ -1,0 +1,29 @@
+DIV
+    -display flex
+    -flexBasis 100%
+    -overflow auto
+    .className article
+    -backgroundColor white
+
+    div
+        H1 'Getting started
+        p 'Create interactive web application for different devices (phone, tablet, laptop) in less time as possible is not easy.
+
+
+        H2 'First example
+    
+        code
+            pre 'div root
+            pre '    -display flex
+            pre '    -backgroundColor red
+            pre '    .id almostUselessInUxLang
+            pre '    .className cssClass1 cssClass2 ...
+            pre '    h1 \'Title page
+            pre '    p \'a paragraph
+            pre '    img
+            pre '        .src ./path/to/file
+
+        p 'a ux file is the representation of a rooted tree. The tree can be a model for an html document, svg document, a piece of html document (a component).
+
+        p 'a ux file is the representation of a rooted tree. The tree can be a model for an html document, svg document, a piece of html document (a component).
+

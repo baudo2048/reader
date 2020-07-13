@@ -10,6 +10,7 @@ root.appendChild(win)
 
 
 win.contentArea.append(windowServicesContent())
-win.titleName.innerHTML = 'Services'
+win.title.innerHTML = 'Services'
+
 return root
 }

@@ -16,7 +16,7 @@ var panelPrj = document.createElement('div')
 root.appendChild(a1)
 
 panelPrj.style.display='block'
-panelPrj.style.maxHeight='400px'
+panelPrj.style.maxHeight='350px'
 panelPrj.style.overflow='auto'
 panelPrj.style.borderRadius='25px'
 panelPrj.style.margin='15px'
@@ -75,6 +75,19 @@ document.json('files', {folder: 'default'}).then(data=>{
     panelPrj.append(item)
   })
 }) */
+
+
+document.register('accordion.filterFiles', ev => {
+    var str = ev.detail
+    Array.from(panelPrj.children).forEach(v => {
+        if(!v.innerHTML.includes(str)){
+            v.style.display = 'none'
+        } else {
+            v.style.display = 'flex'
+        }
+    })
+    
+})
 
 return root
 }

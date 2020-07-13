@@ -49,3 +49,16 @@ document.json('files', {folder: 'default'}).then(data=>{
     panelPrj.append(item)
   })
 }) */
+
+
+document.register('accordion.filterFiles', ev => {
+    var str = ev.detail
+    Array.from(panelPrj.children).forEach(v => {
+        if(!v.innerHTML.includes(str)){
+            v.style.display = 'none'
+        } else {
+            v.style.display = 'flex'
+        }
+    })
+    
+})

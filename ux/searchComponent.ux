@@ -1,0 +1,6 @@
+div root
+    form
+        .className pure-form
+        input strSearch
+            .className pure-input-rounded
+            .type text

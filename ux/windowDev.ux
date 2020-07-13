@@ -1,13 +1,11 @@
 div root
     -display flex
-    -position fixed
+    -flexBasis 100%
     -width 660px
     -height 580px
-    -top 53px
-    -left 249px
     -flexDirection column
     -border 3px solid black
-    -overflow none
+    -overflow auto
     -zIndex 100
     -boxSizing border-box
     
@@ -21,24 +19,49 @@ div root
             -display flex
             img windowImgMove 
                 .src ./img/baseline_open_with_black_18dp.png
+            
+            button ctaNewComp '+ new
+                -marginLeft 20px
+                -marginTop 5px
+                -maringBottom 5px
+                -fontFamily "Open Sans", "Courier New"
+                -fontSize 20px
+                -fontWeight bold
+                -backgroundColor rgb(0, 140, 186)
+                -color white
+                .title Create New Component
 
-            img imgCode
-                -cursor pointer
-                .onmouseover ev => {imgCode.src="./img/baseline_code_black_18dp.png"}
-                .onmouseleave ev => {imgCode.src="./img/baseline_code_white_18dp.png"}
-                .src ./img/baseline_code_white_18dp.png
+            button imgCode '{html}
+                -marginLeft 20px
+                -marginTop 5px
+                -maringBottom 5px
+                -fontFamily "Open Sans", "Courier New"
+                -fontSize 20px
+                -fontWeight bold
+                -backgroundColor rgb(0, 140, 186)
+                -color white
 
-            img imgScript
-                .src ./img/baseline_description_black_18dp.png
+                
+
+            button imgScript '{js}
+                -marginLeft 20px
+                -marginTop 5px
+                -maringBottom 5px
+                -fontFamily "Courier New"
+                -fontSize 22px
 
             img imgCss
                 .src ./img/baseline_text_format_black_18dp.png
 
             img imgSaveAlt
+                -cursor pointer
                 .src ./img/baseline_save_black_18dp.png
-            
-            img imgPreview
-                .src ./img/baseline_preview_black_18dp.png
+   
+            button imgPreview 'Preview
+                -marginRight 20px
+                -marginLeft 20px
+                -marginTop 5px
+                -maringBottom 5px
 
             img imgDesign
                 .src ./img/baseline_design_services_black_18dp.png
@@ -56,7 +79,7 @@ div root
                 -marginRight 10px
                 -fontSize large
                 .type text
-                .value fileName.ux
+                .value componentName.ux
         
         div
             -display flex
@@ -69,8 +92,10 @@ div root
                 .src ./img/baseline_highlight_off_black_18dp.png
     
     div contentArea
+        -display flex
         -display none
         -flexGrow 1
+        -overflow auto
         -backgroundColor white
 
     div codeArea

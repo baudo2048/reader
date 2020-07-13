@@ -95,6 +95,18 @@ td{
     background-color: #EFF0F1;
   }
 
+  .article p {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 80%;
+  }
+
+  .article code pre {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 80%;
+  }
+
 }
 
 

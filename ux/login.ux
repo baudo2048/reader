@@ -1,0 +1,9 @@
+div root
+    h1 'LOGIN PAGE
+    p 'Coming soon
+    input 
+        .type text
+    input
+        .type text
+    button ctaLogin 'Login
+    button ctaRegister 'Register

@@ -22,6 +22,8 @@ restClient()
 import parser from './lib/parser/parse.js'
 document.parser = parser
 
+import storeClient from './lib/data/storeClient.js'
+storeClient()
 
 
 if(screen.width >= 700){

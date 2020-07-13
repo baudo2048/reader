@@ -1,0 +1,1 @@
+module.exports = {"nome":["giuseppe", "mario"],"cognome":["h", "rossi"], "mail":["1","2"]}

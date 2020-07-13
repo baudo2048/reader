@@ -1,0 +1,11 @@
+div root
+    h1 'Hello World
+    a 'kate-code
+        .href http://localhost:3000
+    div
+        -width 100px
+        -height 100px
+        -backgroundColor pink
+        .className bttn-gradient bttn-md flyIn
+        .onclick saluta
+        h3 'click the box
